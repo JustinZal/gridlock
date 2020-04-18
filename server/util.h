@@ -3,4 +3,5 @@
 
 int randomNumber(int intervalStart, int intervalEnd);
 
-int randomElement(const std::vector<int> v);
+template <class T>
+T randomElement(const std::vector<T>);
