@@ -1,6 +1,6 @@
 #include "grid.h"
 
-void Grid::Grid(GridSize size){
+void Grid::Grid(GRIDSIZE size){
 	grid=new Object*[size][size]
 }
 

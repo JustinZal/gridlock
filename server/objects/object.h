@@ -2,6 +2,7 @@
 #define object_h
 
 #include <stdexcept>
+
 #include "vector.h"
 
 class Object{

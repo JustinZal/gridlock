@@ -11,7 +11,7 @@ class Grid{
 		Object *grid[][]=NULL;
 
 	public:
-		void Grid(GridSize size);
+		void Grid(GRIDSIZE size);
 		void Turn();
 };
 
