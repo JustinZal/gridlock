@@ -2,6 +2,7 @@
 #define player_h
 
 #include <stdexcept>
+#include "constants.h"
 
 #include "object.h"
 

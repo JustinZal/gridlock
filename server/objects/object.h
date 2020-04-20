@@ -2,17 +2,22 @@
 #define object_h
 
 #include <stdexcept>
-
-struct vector{
-	int x,y;
-}
+#include "vector.h"
 
 class Object{
 	private:
-		struct vector v;
+		Vector velocity;
+		void accelerate(Vector v);
 
 	public:
-		void accelerate(unsigned int energy,struct vector direction);
+		void Object();
+
+		Vector getVelocity();
+		int getMass();
+		int getDensity();
+		int getVolume();
+
+		void impact(Vector);
 		
 };
 
