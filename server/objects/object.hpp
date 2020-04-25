@@ -3,7 +3,8 @@
 
 #include <stdexcept>
 
-#include "vector.h"
+#include "vector.hpp"
+#include "object.hpp"
 
 class Object{
 	private:
@@ -19,7 +20,7 @@ class Object{
 		int getVolume();
 
 		void impact(Vector);
-		
+
 };
 
 #endif

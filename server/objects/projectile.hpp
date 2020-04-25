@@ -2,9 +2,10 @@
 #define projectile_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "object.h"
+#include "object.hpp"
+#include "projectile.hpp"
 
 class Projectile:public object{
 	private:

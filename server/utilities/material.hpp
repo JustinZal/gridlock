@@ -2,9 +2,9 @@
 #define material_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "material.h"
+#include "material.hpp"
 
 class Material{
 

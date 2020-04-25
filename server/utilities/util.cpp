@@ -1,4 +1,4 @@
-#include "util.h"
+#include "util.hpp"
 #include <iostream>
 #include <random>
 #include <vector>
@@ -17,7 +17,7 @@ template <class T>
 T randomElement(const std::vector<T> v) {
   const auto length = v.size();
   assert(length > 0);
-  
+
   return v[randomNumberFromInterval(0, length - 1)];
 }
 

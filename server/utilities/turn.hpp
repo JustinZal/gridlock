@@ -2,9 +2,9 @@
 #define turn_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "turn.h"
+#include "turn.hpp"
 
 class Turn:public Location{
 	private:

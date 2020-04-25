@@ -2,9 +2,9 @@
 #define move_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "move.h"
+#include "move.hpp"
 
 class Move{
 	private:

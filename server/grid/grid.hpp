@@ -2,9 +2,9 @@
 #define grid_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "grid.h"
+#include "grid.hpp"
 
 class Grid{
 	private:

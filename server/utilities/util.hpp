@@ -1,6 +1,8 @@
 #include <stdexcept>
 #include <vector>
 
+#include "util.hpp"
+
 int randomNumberFromInterval(int intervalStart, int intervalEnd);
 
 template <class T>

@@ -2,9 +2,9 @@
 #define location_h
 
 #include <stdexcept>
-#include "constants.h"
+#include "constants.hpp"
 
-#include "location.h"
+#include "location.hpp"
 
 class Location{
 	private:

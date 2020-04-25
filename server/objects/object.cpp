@@ -1,5 +1,5 @@
 #include <stdexcept>
 
-#include "vector.h"
+#include "vector.hpp"
 
-#include "object.h"
+#include "object.hpp"
