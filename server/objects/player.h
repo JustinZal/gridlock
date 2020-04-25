@@ -7,7 +7,9 @@
 #include "object.h"
 
 class Player:public object{
-	
+	std::string token;
+	std::string name;
+	std::vector<Container> conatiners;
 };
 
 #endif

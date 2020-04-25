@@ -9,6 +9,7 @@
 class Grid{
 	private:
 		Object *grid[][]=NULL;
+		std::vector<Location> players;
 
 	public:
 		void Grid(GRIDSIZE size);

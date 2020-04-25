@@ -8,7 +8,7 @@
 class Object{
 	private:
 		Vector velocity;
-		void accelerate(Vector v);
+		Move moves
 
 	public:
 		void Object();
