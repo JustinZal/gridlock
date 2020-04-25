@@ -10,8 +10,17 @@
 
 class Container{
 	public:
-		void setContent(unsigned int _content) {
-			content = _content;
+		bool modifyContent(int _content) {
+			if (!dryModifyContent(_content)) {
+				return false;
+			};
+
+			content += _content;
+			return true;
+		};
+
+		bool dryModifyContent(int _content) {
+			return ((content + _content) <= volume);
 		};
 
 		unsigned int getContent() {
@@ -19,6 +28,7 @@ class Container{
 		};
 
 		void setMaterial(Material *_material) {
+			// TODO add dry run and checks 
 			material = _material;
 		};
 
