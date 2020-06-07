@@ -6,12 +6,22 @@
 
 #include "container.hpp"
 
-class Container:public object{
-	public:
-
-
+class Container{
 	private:
+		int Volume;
 
+	public:
+		void Container();
+
+};
+
+class ContainerItem:public Item,public InternalItem{
+	private:
+		Container *type;
+		Material *material=NULL;
+
+	public:
+		void ContainerItem(Container *_type);
 };
 
 #endif

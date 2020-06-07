@@ -6,12 +6,22 @@
 
 #include "generator.hpp"
 
-class Generator:public object{
-	public:
-
-
+class Generator{
 	private:
+		int maxGeneration;
+		int efficiency;
 
+	public:
+		void Generator();
+
+};
+
+class GeneratorItem:public Item,public InternalItem{
+	private:
+		Generator *type;
+
+	public:
+		void GeneratorItem(Generator *_type);
 };
 
 #endif

@@ -2,9 +2,11 @@
 #define player_h
 
 #include <stdexcept>
+#include <string>
 #include "constants.hpp"
 
 #include "object.hpp"
+
 #include "player.hpp"
 
 class Player:public object{
