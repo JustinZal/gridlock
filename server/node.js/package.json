@@ -1,0 +1,15 @@
+{
+  "name": "gridlock",
+  "version": "1.0.0",
+  "description": "Server based space strategy game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Justinas Zaliaduonis & Luis Vierroth",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.31"
+  }
+}

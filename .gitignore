@@ -69,3 +69,4 @@ Thumbs.db
 # Composer storage #
 /vendor
 composer.lock
+server/node.js/node_modules
