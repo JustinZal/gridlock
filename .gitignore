@@ -72,3 +72,4 @@ composer.lock
 server/node.js/node_modules
 *CMakeCache.txt
 *CMakeFiles
+*build
