@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+
+#include "item.hpp"
 #include "itemType.hpp"
 #include "shipItem.hpp"
 #include "internalItem.hpp"
@@ -16,16 +18,16 @@ class Generator:public ItemType{
 		unsigned int efficiency;
 
 	public:
-		void Generator();
+		Generator();
 
 };
 
-class GeneratorItem:public Iterm,public ShipItem,public InternalItem{
+class GeneratorItem:public Item,public ShipItem,public InternalItem{
 	private:
 		Generator *type;
 
 	public:
-		void GeneratorItem(Generator *_type);
+		GeneratorItem(Generator *_type);
 };
 
 #endif

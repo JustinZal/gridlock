@@ -9,7 +9,7 @@
 
 class Item{
 	private:
-		void Item();
+		Item();
 		unsigned int size;
 		string Name;
 

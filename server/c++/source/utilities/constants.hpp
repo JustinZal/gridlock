@@ -14,9 +14,9 @@ enum GRIDSIZE{Mini=24,Small=64,Normal=128,Large=256};
 enum DIRECTION{U,D,L,R};
 
 
-shield shields{};
-container generators{};
-booster boosters{};
-container containers{};
+/*Shield shields{};
+Container generators{};
+Booster boosters{};
+Container containers{};*/
 
 #endif

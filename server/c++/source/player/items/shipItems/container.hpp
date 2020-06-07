@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "item.hpp"
 #include "itemType.hpp"
 #include "shipItem.hpp"
 #include "internalItem.hpp"
@@ -15,17 +16,17 @@ class Container:public ItemType{
 		unsigned int Volume;
 
 	public:
-		void Container();
+		Container();
 
 };
 
-class ContainerItem:public Iterm,public ShipItem,public InternalItem{
+class ContainerItem:public Item,public ShipItem,public InternalItem{
 	private:
 		Container *type;
 		Material *material=NULL;
 
 	public:
-		void ContainerItem(Container *_type);
+		ContainerItem(Container *_type);
 };
 
 #endif

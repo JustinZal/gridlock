@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "item.hpp"
 #include "itemType.hpp"
 #include "shipItem.hpp"
 #include "internalItem.hpp"
@@ -16,7 +17,7 @@ class Booster:public ItemType{
 		unsigned int efficiency;
 
 	public:
-		void Booster();
+		Booster();
 
 		unsigned int getMaxPower();
 
@@ -24,12 +25,12 @@ class Booster:public ItemType{
 
 };
 
-class BoosterItem:public Iterm,public ShipItem{
+class BoosterItem:public Item,public ShipItem{
 	private:
 		Booster *type;
 
 	public:
-		void BoosterItem(Booster *_type);
+		BoosterItem(Booster *_type);
 };
 
 #endif

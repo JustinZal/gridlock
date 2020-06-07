@@ -6,6 +6,6 @@
 
 #include "itemType.hpp"
 
-class ItemType:public ItemType{};
+class ItemType{};
 
 #endif

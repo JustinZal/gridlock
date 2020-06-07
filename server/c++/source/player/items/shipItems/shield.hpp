@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "item.hpp"
 #include "itemType.hpp"
 #include "shipItem.hpp"
 #include "internalItem.hpp"
@@ -17,17 +18,17 @@ class Shield:public ItemType{
 		unsigned int Efficiency;
 
 	public:
-		void Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
+		Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
 
 };
 
-class ShieldItem:public Iterm,public ShipItem,public InternalItem{
+class ShieldItem:public Item,public ShipItem,public InternalItem{
 	private:
 		Shield *type;
 		unsigned int protection;
 
 	public:
-		void ShieldItem(Shield *_type);
+		ShieldItem(Shield *_type);
 
 		unsigned int getProtection();
 
