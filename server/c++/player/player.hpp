@@ -13,7 +13,10 @@ class Player:public object {
 	public:
 		std::string getToken();
 		std::string getName();
-		void Player(std::string _name, std::string _token);
+		void Player(
+			std::string _name, std::string _token,
+			Slots externalItems, Slots internalItems
+		);
 
 	private:
 		std::string token;

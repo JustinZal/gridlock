@@ -9,10 +9,9 @@ std::string Player::getName() {
 }
 
 void Player::Player(
-  std::string _name,
-  std::string _token,
-  Slots _externalItems,
-  Slots _internalItems) {
+  std::string _name, std::string _token,
+  Slots _externalItems, Slots _internalItems
+) {
   name = _name;
   token = _token;
   externalItems = _externalItems;
