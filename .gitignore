@@ -70,5 +70,5 @@ Thumbs.db
 /vendor
 composer.lock
 server/node.js/node_modules
-server/c++/CMakeCache.txt
-server/c++/CMakeFiles
+*CMakeCache.txt
+*CMakeFiles
