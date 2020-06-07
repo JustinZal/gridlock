@@ -12,7 +12,7 @@ class Grid{
 		std::vector<Location> players;
 
 	public:
-		void Grid(GRIDSIZE size=Normal,int playerExternalItems=4,int playerInternalItems=20);
+		void Grid(GRIDSIZE size=Normal,unsigned int playerExternalItems=4,unsigned int playerInternalItems=20);
 		void Turn();
 };
 

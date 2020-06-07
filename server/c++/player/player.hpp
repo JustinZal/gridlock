@@ -27,6 +27,8 @@ class Player:public object{
 			containers
 		}
 
+		bool craft();
+
 	private:
 		std::string token;
 		std::string name;

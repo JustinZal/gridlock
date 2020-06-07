@@ -4,18 +4,22 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "itemType.hpp"
+#include "shipItem.hpp"
+#include "internalItem.hpp"
+
 #include "container.hpp"
 
-class Container{
+class Container:public ItemType{
 	private:
-		int Volume;
+		unsigned int Volume;
 
 	public:
 		void Container();
 
 };
 
-class ContainerItem:public Item,public InternalItem{
+class ContainerItem:public Iterm,public ShipItem,public InternalItem{
 	private:
 		Container *type;
 		Material *material=NULL;

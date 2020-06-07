@@ -4,19 +4,23 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "itemType.hpp"
+#include "shipItem.hpp"
+#include "internalItem.hpp"
+
 #include "generator.hpp"
 
-class Generator{
+class Generator:public ItemType{
 	private:
-		int maxGeneration;
-		int efficiency;
+		unsigned int maxGeneration;
+		unsigned int efficiency;
 
 	public:
 		void Generator();
 
 };
 
-class GeneratorItem:public Item,public InternalItem{
+class GeneratorItem:public Iterm,public ShipItem,public InternalItem{
 	private:
 		Generator *type;
 

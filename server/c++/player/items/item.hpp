@@ -10,11 +10,11 @@
 class Item{
 	private:
 		void Item();
-		int size;
+		unsigned int size;
 		string Name;
 
 	public:
-		int getSize();
+		unsigned int getSize();
 };
 
 #endif
