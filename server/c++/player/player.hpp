@@ -3,37 +3,23 @@
 
 #include <stdexcept>
 #include <string>
+
 #include "constants.hpp"
-
 #include "object.hpp"
-
 #include "player.hpp"
+#include "slots.hpp"
 
-class Player:public object{
+class Player:public object {
 	public:
-		std::string getToken(){
-			return token;
-		}
-
-		std::string getName(){
-			return name;
-		}
-
-		std::vector<Container> getConatiners(){
-			return container;
-		}
-
-		void addContainer(std::vector<Container> _conatiners){
-			containers
-		}
-
-		bool craft();
+		std::string getToken();
+		std::string getName();
+		void Player(std::string _name, std::string _token);
 
 	private:
 		std::string token;
 		std::string name;
-		std::vector<Container> conatiners;
-
+		Slots externalItems;
+		Slots internalItems;
 };
 
 #endif
