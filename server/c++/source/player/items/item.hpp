@@ -11,7 +11,7 @@ class Item{
 	private:
 		Item();
 		unsigned int size;
-		string Name;
+		std::string Name;
 
 	public:
 		unsigned int getSize();

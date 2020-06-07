@@ -20,10 +20,10 @@ class Container:public ItemType{
 
 };
 
-class ContainerItem:public Item,public ShipItem,public InternalItem{
+class ContainerItem: public Item, public ShipItem, public InternalItem {
 	private:
 		Container *type;
-		Material *material=NULL;
+		// Material *material=NULL;
 
 	public:
 		ContainerItem(Container *_type);

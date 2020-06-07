@@ -22,7 +22,7 @@ class Shield:public ItemType{
 
 };
 
-class ShieldItem:public Item,public ShipItem,public InternalItem{
+class ShieldItem: public Item, public ShipItem, public InternalItem {
 	private:
 		Shield *type;
 		unsigned int protection;
