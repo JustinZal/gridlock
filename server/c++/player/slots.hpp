@@ -10,7 +10,7 @@ class Slots {
 
   public:
     bool addItem(ShipItem item);
-    Item * getItem(unsigned int itemId);
+    ShipItem * getItem(unsigned int itemId);
     std::vector<ShipItem> * getItems();
     bool dryAddItem(ShipItem item);
     bool dryGetItem(unsigned int itemId);

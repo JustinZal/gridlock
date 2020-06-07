@@ -9,7 +9,7 @@ bool Slots::addItem(ShipItem item) {
   return true;
 }
 
-Item * Slots::getItem(unsigned int itemId) {
+ShipItem * Slots::getItem(unsigned int itemId) {
   if (!dryGetItem(itemId)) {
     return null;
   }
