@@ -1,7 +1,7 @@
 #include "booster.hpp"
 
-void Booster::Booster(){
-	
+Booster::Booster(){
+
 }
 
 void BoosterItem::BoosterItem(Booster *_type){

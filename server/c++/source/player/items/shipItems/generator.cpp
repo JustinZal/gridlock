@@ -1,7 +1,7 @@
 #include "generator.hpp"
 
-void Generator::Generator(){
-	
+Generator::Generator(){
+
 }
 
 void GeneratorItem::GeneratorItem(Generator *_type){

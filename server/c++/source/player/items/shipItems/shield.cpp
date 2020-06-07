@@ -1,7 +1,7 @@
 #include "shield.hpp"
 
-void Shield::Shield(){
-	
+Shield::Shield(){
+
 }
 
 void ShieldItem::ShieldItem(Shield *_type){

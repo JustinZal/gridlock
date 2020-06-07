@@ -7,14 +7,10 @@
 
 #include "item.hpp"
 
-class Item{
+class Item {
 	private:
-		Item();
 		unsigned int size;
 		std::string Name;
-
-	public:
-		unsigned int getSize();
 };
 
 #endif
