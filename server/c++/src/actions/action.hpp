@@ -4,6 +4,7 @@
 class Action{
 private:
 public:
+	bool dryExecute();
 	bool execute();
 };
 

@@ -3,6 +3,8 @@
 
 #include <stdexcept>
 
+#include "rocket.hpp"
+#include "bullet.hpp"
 #include "shield.hpp"
 #include "generator.hpp"
 #include "booster.hpp"
@@ -10,9 +12,21 @@
 
 #include "constants.hpp"
 
+
+// Ammunitions
+
+// Rocket rockets{};
+// Bullet bullets{};
+
+
+// Ship items
+
 // Shield shields{};
-// Container generators{};
+// Generator generators{};
 // Booster boosters{};
 // Container containers{};
+
+
+// Materials
 
 #endif

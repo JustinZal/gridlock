@@ -19,7 +19,7 @@ public:
 	Container();
 };
 
-class ContainerItem: public Item, public ShipItem, public InternalItem {
+class ContainerItem:public Item,public ShipItem,public InternalItem {
 private:
 	Container *type;
 	// Material *material=NULL;

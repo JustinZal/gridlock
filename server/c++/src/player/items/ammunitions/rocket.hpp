@@ -5,9 +5,13 @@
 #include <string>
 #include "constants.hpp"
 
+#include "item.hpp"
+#include "itemType.hpp"
+#include "physicsObject.hpp"
+
 #include "rocket.hpp"
 
-class Rocket{
+class Rocket:public ItemType{
 private:
 public:
 };
@@ -17,7 +21,7 @@ private:
 public:
 };
 
-class RocketProjectile:public Item{
+class RocketProjectile:public PhysicsObject{
 private:
 public:
 };

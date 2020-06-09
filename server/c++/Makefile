@@ -68,7 +68,7 @@ RM = /usr/local/Cellar/cmake/3.17.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/luisvierroth/Desktop/gridlock/server/c++/source
+CMAKE_SOURCE_DIR = /Users/luisvierroth/Desktop/gridlock/server/c++
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/luisvierroth/Desktop/gridlock/server/c++
@@ -143,32 +143,383 @@ gridlock/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/build
 .PHONY : gridlock/fast
 
-main.o: main.cpp.o
+src/grid/grid.o: src/grid/grid.cpp.o
 
-.PHONY : main.o
+.PHONY : src/grid/grid.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/grid/grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/grid.cpp.o
+.PHONY : src/grid/grid.cpp.o
 
-main.i: main.cpp.i
+src/grid/grid.i: src/grid/grid.cpp.i
 
-.PHONY : main.i
+.PHONY : src/grid/grid.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/grid/grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/grid.cpp.i
+.PHONY : src/grid/grid.cpp.i
 
-main.s: main.cpp.s
+src/grid/grid.s: src/grid/grid.cpp.s
 
-.PHONY : main.s
+.PHONY : src/grid/grid.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/grid/grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/grid.cpp.s
+.PHONY : src/grid/grid.cpp.s
+
+src/grid/node.o: src/grid/node.cpp.o
+
+.PHONY : src/grid/node.o
+
+# target to build an object file
+src/grid/node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/node.cpp.o
+.PHONY : src/grid/node.cpp.o
+
+src/grid/node.i: src/grid/node.cpp.i
+
+.PHONY : src/grid/node.i
+
+# target to preprocess a source file
+src/grid/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/node.cpp.i
+.PHONY : src/grid/node.cpp.i
+
+src/grid/node.s: src/grid/node.cpp.s
+
+.PHONY : src/grid/node.s
+
+# target to generate assembly for a file
+src/grid/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/grid/node.cpp.s
+.PHONY : src/grid/node.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/objects/deposit.o: src/objects/deposit.cpp.o
+
+.PHONY : src/objects/deposit.o
+
+# target to build an object file
+src/objects/deposit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/objects/deposit.cpp.o
+.PHONY : src/objects/deposit.cpp.o
+
+src/objects/deposit.i: src/objects/deposit.cpp.i
+
+.PHONY : src/objects/deposit.i
+
+# target to preprocess a source file
+src/objects/deposit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/objects/deposit.cpp.i
+.PHONY : src/objects/deposit.cpp.i
+
+src/objects/deposit.s: src/objects/deposit.cpp.s
+
+.PHONY : src/objects/deposit.s
+
+# target to generate assembly for a file
+src/objects/deposit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/objects/deposit.cpp.s
+.PHONY : src/objects/deposit.cpp.s
+
+src/player/items/ammunitions/bullet.o: src/player/items/ammunitions/bullet.cpp.o
+
+.PHONY : src/player/items/ammunitions/bullet.o
+
+# target to build an object file
+src/player/items/ammunitions/bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/bullet.cpp.o
+.PHONY : src/player/items/ammunitions/bullet.cpp.o
+
+src/player/items/ammunitions/bullet.i: src/player/items/ammunitions/bullet.cpp.i
+
+.PHONY : src/player/items/ammunitions/bullet.i
+
+# target to preprocess a source file
+src/player/items/ammunitions/bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/bullet.cpp.i
+.PHONY : src/player/items/ammunitions/bullet.cpp.i
+
+src/player/items/ammunitions/bullet.s: src/player/items/ammunitions/bullet.cpp.s
+
+.PHONY : src/player/items/ammunitions/bullet.s
+
+# target to generate assembly for a file
+src/player/items/ammunitions/bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/bullet.cpp.s
+.PHONY : src/player/items/ammunitions/bullet.cpp.s
+
+src/player/items/ammunitions/rocket.o: src/player/items/ammunitions/rocket.cpp.o
+
+.PHONY : src/player/items/ammunitions/rocket.o
+
+# target to build an object file
+src/player/items/ammunitions/rocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/rocket.cpp.o
+.PHONY : src/player/items/ammunitions/rocket.cpp.o
+
+src/player/items/ammunitions/rocket.i: src/player/items/ammunitions/rocket.cpp.i
+
+.PHONY : src/player/items/ammunitions/rocket.i
+
+# target to preprocess a source file
+src/player/items/ammunitions/rocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/rocket.cpp.i
+.PHONY : src/player/items/ammunitions/rocket.cpp.i
+
+src/player/items/ammunitions/rocket.s: src/player/items/ammunitions/rocket.cpp.s
+
+.PHONY : src/player/items/ammunitions/rocket.s
+
+# target to generate assembly for a file
+src/player/items/ammunitions/rocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/ammunitions/rocket.cpp.s
+.PHONY : src/player/items/ammunitions/rocket.cpp.s
+
+src/player/items/item.o: src/player/items/item.cpp.o
+
+.PHONY : src/player/items/item.o
+
+# target to build an object file
+src/player/items/item.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/item.cpp.o
+.PHONY : src/player/items/item.cpp.o
+
+src/player/items/item.i: src/player/items/item.cpp.i
+
+.PHONY : src/player/items/item.i
+
+# target to preprocess a source file
+src/player/items/item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/item.cpp.i
+.PHONY : src/player/items/item.cpp.i
+
+src/player/items/item.s: src/player/items/item.cpp.s
+
+.PHONY : src/player/items/item.s
+
+# target to generate assembly for a file
+src/player/items/item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/item.cpp.s
+.PHONY : src/player/items/item.cpp.s
+
+src/player/items/shipItems/booster.o: src/player/items/shipItems/booster.cpp.o
+
+.PHONY : src/player/items/shipItems/booster.o
+
+# target to build an object file
+src/player/items/shipItems/booster.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/booster.cpp.o
+.PHONY : src/player/items/shipItems/booster.cpp.o
+
+src/player/items/shipItems/booster.i: src/player/items/shipItems/booster.cpp.i
+
+.PHONY : src/player/items/shipItems/booster.i
+
+# target to preprocess a source file
+src/player/items/shipItems/booster.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/booster.cpp.i
+.PHONY : src/player/items/shipItems/booster.cpp.i
+
+src/player/items/shipItems/booster.s: src/player/items/shipItems/booster.cpp.s
+
+.PHONY : src/player/items/shipItems/booster.s
+
+# target to generate assembly for a file
+src/player/items/shipItems/booster.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/booster.cpp.s
+.PHONY : src/player/items/shipItems/booster.cpp.s
+
+src/player/items/shipItems/container.o: src/player/items/shipItems/container.cpp.o
+
+.PHONY : src/player/items/shipItems/container.o
+
+# target to build an object file
+src/player/items/shipItems/container.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/container.cpp.o
+.PHONY : src/player/items/shipItems/container.cpp.o
+
+src/player/items/shipItems/container.i: src/player/items/shipItems/container.cpp.i
+
+.PHONY : src/player/items/shipItems/container.i
+
+# target to preprocess a source file
+src/player/items/shipItems/container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/container.cpp.i
+.PHONY : src/player/items/shipItems/container.cpp.i
+
+src/player/items/shipItems/container.s: src/player/items/shipItems/container.cpp.s
+
+.PHONY : src/player/items/shipItems/container.s
+
+# target to generate assembly for a file
+src/player/items/shipItems/container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/container.cpp.s
+.PHONY : src/player/items/shipItems/container.cpp.s
+
+src/player/items/shipItems/generator.o: src/player/items/shipItems/generator.cpp.o
+
+.PHONY : src/player/items/shipItems/generator.o
+
+# target to build an object file
+src/player/items/shipItems/generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/generator.cpp.o
+.PHONY : src/player/items/shipItems/generator.cpp.o
+
+src/player/items/shipItems/generator.i: src/player/items/shipItems/generator.cpp.i
+
+.PHONY : src/player/items/shipItems/generator.i
+
+# target to preprocess a source file
+src/player/items/shipItems/generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/generator.cpp.i
+.PHONY : src/player/items/shipItems/generator.cpp.i
+
+src/player/items/shipItems/generator.s: src/player/items/shipItems/generator.cpp.s
+
+.PHONY : src/player/items/shipItems/generator.s
+
+# target to generate assembly for a file
+src/player/items/shipItems/generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/generator.cpp.s
+.PHONY : src/player/items/shipItems/generator.cpp.s
+
+src/player/items/shipItems/shield.o: src/player/items/shipItems/shield.cpp.o
+
+.PHONY : src/player/items/shipItems/shield.o
+
+# target to build an object file
+src/player/items/shipItems/shield.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/shield.cpp.o
+.PHONY : src/player/items/shipItems/shield.cpp.o
+
+src/player/items/shipItems/shield.i: src/player/items/shipItems/shield.cpp.i
+
+.PHONY : src/player/items/shipItems/shield.i
+
+# target to preprocess a source file
+src/player/items/shipItems/shield.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/shield.cpp.i
+.PHONY : src/player/items/shipItems/shield.cpp.i
+
+src/player/items/shipItems/shield.s: src/player/items/shipItems/shield.cpp.s
+
+.PHONY : src/player/items/shipItems/shield.s
+
+# target to generate assembly for a file
+src/player/items/shipItems/shield.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/items/shipItems/shield.cpp.s
+.PHONY : src/player/items/shipItems/shield.cpp.s
+
+src/player/player.o: src/player/player.cpp.o
+
+.PHONY : src/player/player.o
+
+# target to build an object file
+src/player/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/player.cpp.o
+.PHONY : src/player/player.cpp.o
+
+src/player/player.i: src/player/player.cpp.i
+
+.PHONY : src/player/player.i
+
+# target to preprocess a source file
+src/player/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/player.cpp.i
+.PHONY : src/player/player.cpp.i
+
+src/player/player.s: src/player/player.cpp.s
+
+.PHONY : src/player/player.s
+
+# target to generate assembly for a file
+src/player/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/player.cpp.s
+.PHONY : src/player/player.cpp.s
+
+src/player/slots.o: src/player/slots.cpp.o
+
+.PHONY : src/player/slots.o
+
+# target to build an object file
+src/player/slots.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/slots.cpp.o
+.PHONY : src/player/slots.cpp.o
+
+src/player/slots.i: src/player/slots.cpp.i
+
+.PHONY : src/player/slots.i
+
+# target to preprocess a source file
+src/player/slots.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/slots.cpp.i
+.PHONY : src/player/slots.cpp.i
+
+src/player/slots.s: src/player/slots.cpp.s
+
+.PHONY : src/player/slots.s
+
+# target to generate assembly for a file
+src/player/slots.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/player/slots.cpp.s
+.PHONY : src/player/slots.cpp.s
+
+src/utilities/util.o: src/utilities/util.cpp.o
+
+.PHONY : src/utilities/util.o
+
+# target to build an object file
+src/utilities/util.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/utilities/util.cpp.o
+.PHONY : src/utilities/util.cpp.o
+
+src/utilities/util.i: src/utilities/util.cpp.i
+
+.PHONY : src/utilities/util.i
+
+# target to preprocess a source file
+src/utilities/util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/utilities/util.cpp.i
+.PHONY : src/utilities/util.cpp.i
+
+src/utilities/util.s: src/utilities/util.cpp.s
+
+.PHONY : src/utilities/util.s
+
+# target to generate assembly for a file
+src/utilities/util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gridlock.dir/build.make CMakeFiles/gridlock.dir/src/utilities/util.cpp.s
+.PHONY : src/utilities/util.cpp.s
 
 # Help Target
 help:
@@ -179,9 +530,48 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gridlock"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/grid/grid.o"
+	@echo "... src/grid/grid.i"
+	@echo "... src/grid/grid.s"
+	@echo "... src/grid/node.o"
+	@echo "... src/grid/node.i"
+	@echo "... src/grid/node.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/objects/deposit.o"
+	@echo "... src/objects/deposit.i"
+	@echo "... src/objects/deposit.s"
+	@echo "... src/player/items/ammunitions/bullet.o"
+	@echo "... src/player/items/ammunitions/bullet.i"
+	@echo "... src/player/items/ammunitions/bullet.s"
+	@echo "... src/player/items/ammunitions/rocket.o"
+	@echo "... src/player/items/ammunitions/rocket.i"
+	@echo "... src/player/items/ammunitions/rocket.s"
+	@echo "... src/player/items/item.o"
+	@echo "... src/player/items/item.i"
+	@echo "... src/player/items/item.s"
+	@echo "... src/player/items/shipItems/booster.o"
+	@echo "... src/player/items/shipItems/booster.i"
+	@echo "... src/player/items/shipItems/booster.s"
+	@echo "... src/player/items/shipItems/container.o"
+	@echo "... src/player/items/shipItems/container.i"
+	@echo "... src/player/items/shipItems/container.s"
+	@echo "... src/player/items/shipItems/generator.o"
+	@echo "... src/player/items/shipItems/generator.i"
+	@echo "... src/player/items/shipItems/generator.s"
+	@echo "... src/player/items/shipItems/shield.o"
+	@echo "... src/player/items/shipItems/shield.i"
+	@echo "... src/player/items/shipItems/shield.s"
+	@echo "... src/player/player.o"
+	@echo "... src/player/player.i"
+	@echo "... src/player/player.s"
+	@echo "... src/player/slots.o"
+	@echo "... src/player/slots.i"
+	@echo "... src/player/slots.s"
+	@echo "... src/utilities/util.o"
+	@echo "... src/utilities/util.i"
+	@echo "... src/utilities/util.s"
 .PHONY : help
 
 
