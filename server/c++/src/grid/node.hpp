@@ -20,8 +20,8 @@ class Node {
     // std::vector<Material> getDeposits();
     std::vector<Item> getItems();
     Player * getOccupier();
-    void setOccupier(Player & _occupier);
-    void setItems(std::vector<int> _items);
+    void setOccupier(Player *_occupier);
+    void setItems(std::vector<Item> _items);
 };
 
 #endif

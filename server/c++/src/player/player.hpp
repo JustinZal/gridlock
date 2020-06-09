@@ -3,6 +3,7 @@
 
 #include <stdexcept>
 #include <string>
+#include "constants.hpp"
 
 #include "item.hpp"
 #include "shipItem.hpp"
@@ -21,10 +22,14 @@ private:
 	Slots internalItems;
 
 public:
-	Player(std::string _name,std::string _token,Slots externalItems,Slots internalItems);
+	Player(std::string _name,std::string _token,unsigned int _externalItems,unsigned int _internalItems);
 
 	std::string getName();
 	std::string getToken();
+
+	Action getAction(int t) override;
+	Damage getDamage() override;
+	bool collide(unsigned int d) override;
 };
 
 #endif

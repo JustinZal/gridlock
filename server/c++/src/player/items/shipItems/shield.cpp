@@ -1,9 +1,9 @@
 #include "shield.hpp"
 
-Shield::Shield(){
+Shield::Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency){
 
 }
 
-void ShieldItem::ShieldItem(Shield *_type){
+ShieldItem::ShieldItem(Shield *_type){
 	type=_type;
 }

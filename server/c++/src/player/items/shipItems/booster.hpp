@@ -31,6 +31,7 @@ private:
 
 public:
 	BoosterItem(Booster *_type);
+	unsigned int getSize() override;
 };
 
 #endif

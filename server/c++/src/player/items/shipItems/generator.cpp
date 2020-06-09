@@ -4,6 +4,6 @@ Generator::Generator(){
 
 }
 
-void GeneratorItem::GeneratorItem(Generator *_type){
+GeneratorItem::GeneratorItem(Generator *_type){
 	type=_type;
 }

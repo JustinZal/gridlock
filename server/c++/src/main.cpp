@@ -6,6 +6,6 @@
 #include "rocket.hpp"
 
 int main(int argc, const char * argv[]){
-	BulletProjectile* test=new BulletProjectile();
+	//BulletProjectile* test=new BulletProjectile(new Bullet());
 	return 0;
 }

@@ -1,6 +1,6 @@
 #include "deposit.hpp"
 
-Deposit::Deposit(/*Material * _material*/,unsigned int _volume,unsigned int _accessibility){
+Deposit::Deposit(/*Material * _material,*/unsigned int _volume,unsigned int _accessibility){
 	//material=_material;
 	volume=_volume;
 	accessibility=_accessibility;
@@ -10,10 +10,10 @@ Deposit::Deposit(/*Material * _material*/,unsigned int _volume,unsigned int _acc
 	return material;
 }*/
 
-unsigned int getVolume(){
+unsigned int Deposit::getVolume(){
 	return volume;
 }
 
-unsigned int getAccessibility(){
+unsigned int Deposit::getAccessibility(){
 	return accessibility;
 }

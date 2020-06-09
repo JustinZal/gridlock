@@ -31,6 +31,8 @@ public:
 
 	unsigned int getProtection();
 
+	unsigned int getSize() override;
+
 	bool dryRecharge();
 
 	bool recharge();

@@ -26,6 +26,7 @@ private:
 
 public:
 	ContainerItem(Container *_type);
+	unsigned int getSize() override;
 };
 
 #endif

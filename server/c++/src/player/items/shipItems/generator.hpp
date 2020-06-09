@@ -27,6 +27,7 @@ private:
 
 public:
 	GeneratorItem(Generator *_type);
+	unsigned int getSize() override;
 };
 
 #endif

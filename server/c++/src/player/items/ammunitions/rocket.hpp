@@ -3,20 +3,26 @@
 
 #include <stdexcept>
 #include <string>
+#include <array>
 #include "constants.hpp"
 
 #include "item.hpp"
 #include "itemType.hpp"
+#include "movement.hpp"
+#include "damage.hpp"
 #include "physicsObject.hpp"
 
 #include "rocket.hpp"
 
 class Rocket:public ItemType{
 private:
-	Damage dmagae;
+	Damage damage;
 	unsigned int diameter;
 public:
 	Rocket(Damage _damage);
+
+	Damage getDamage();
+	unsigned int getDiameter();
 };
 
 class RocketItem:public Item{
@@ -28,9 +34,13 @@ public:
 class RocketProjectile:public PhysicsObject{
 private:
 	Rocket * type;
-	Movement moves[MOVESPERTURN];
+	std::array<Movement,MOVESPERTURN> moves;
 public:
-	RocketProjectile();
+	RocketProjectile(Rocket *_type,std::array<Movement,MOVESPERTURN> _moves);
+
+	Action getAction(int t) override;
+	Damage getDamage() override;
+	bool collide(unsigned int d) override;
 };
 
 #endif

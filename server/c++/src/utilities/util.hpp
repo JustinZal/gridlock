@@ -1,3 +1,6 @@
+#ifndef util_h
+#define util_h
+
 #include <stdexcept>
 #include <vector>
 
@@ -10,3 +13,5 @@ T randomElement(const std::vector<T> v);
 
 template <class T>
 T weightedDistribution(std::vector<T, int> probabilityPairs);
+
+#endif

@@ -2,6 +2,10 @@
 #define slots_h
 
 #include <vector>
+#include "constants.hpp"
+
+#include "shipItem.hpp"
+
 #include "item.hpp"
 
 #include "slots.hpp"

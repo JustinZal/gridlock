@@ -1,21 +1,22 @@
 #include "rocket.hpp"
 
-//Initialize rocekt
-RocketProjectile::RocketProjectile(Rocket _type){
+//Initialize Rocket
+RocketProjectile::RocketProjectile(Rocket *_type,std::array<Movement,MOVESPERTURN> _moves){
 	type=_type;
+	moves=_moves;
 }
 
 //Get objects action at time (t)
-Action getAction(int t){
-
+Action RocketProjectile::getAction(int t){
+	return moves.at(t);
 }
 
 //Damage the objects gives when coliding
-int RocketProjectile::getDamage(){
-	return type.damage;
+Damage RocketProjectile::getDamage(){
+	return type->getDamage();
 }
 
 //Give collision damage (d) and output if object was destroyed
-bool RocketProjectile::colide(unsigned int d){
+bool RocketProjectile::collide(unsigned int d){
 	return true;
 }

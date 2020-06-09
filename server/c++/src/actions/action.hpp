@@ -4,8 +4,8 @@
 class Action{
 private:
 public:
-	bool dryExecute();
-	bool execute();
+	virtual bool dryExecute();
+	virtual bool execute();
 };
 
 #endif

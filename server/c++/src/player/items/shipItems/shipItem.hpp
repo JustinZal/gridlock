@@ -6,6 +6,10 @@
 
 #include "shipItem.hpp"
 
-class ShipItem{};
+class ShipItem{
+private:
+public:
+	virtual unsigned int getSize();
+};
 
 #endif

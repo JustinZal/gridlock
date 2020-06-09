@@ -4,6 +4,6 @@ Booster::Booster(){
 
 }
 
-void BoosterItem::BoosterItem(Booster *_type){
+BoosterItem::BoosterItem(Booster *_type){
 	type=_type;
 }
