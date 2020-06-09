@@ -19,3 +19,7 @@ void Node::setOccupier(Player & _occupier) {
 void Node::setItems(std::vector<int> _items) {
   items = _items;
 }
+
+Node::Node(std::vector<Deposit> _deposits) {
+  deposit = _deposits;
+}
