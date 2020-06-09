@@ -12,29 +12,28 @@
 #include "shield.hpp"
 
 class Shield:public ItemType{
-	private:
-		unsigned int maxProtection;
-		unsigned int maxRechargeRate;
-		unsigned int Efficiency;
+private:
+	unsigned int maxProtection;
+	unsigned int maxRechargeRate;
+	unsigned int Efficiency;
 
-	public:
-		Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
-
+public:
+	Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
 };
 
 class ShieldItem: public Item, public ShipItem, public InternalItem {
-	private:
-		Shield *type;
-		unsigned int protection;
+private:
+	Shield *type;
+	unsigned int protection;
 
-	public:
-		ShieldItem(Shield *_type);
+public:
+	ShieldItem(Shield *_type);
 
-		unsigned int getProtection();
+	unsigned int getProtection();
 
-		bool dryRecharge();
+	bool dryRecharge();
 
-		bool recharge();
+	bool recharge();
 };
 
 #endif

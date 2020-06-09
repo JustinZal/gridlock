@@ -8,8 +8,8 @@
 #include "projectile.hpp"
 
 class Projectile:public object{
-	private:
-		unsigned int damage=0;
+private:
+	unsigned int damage=0;
 };
 
 #endif

@@ -1,3 +1,6 @@
+#ifndef slots_h
+#define slots_h
+
 #include <vector>
 #include "item.hpp"
 
@@ -14,4 +17,7 @@ class Slots {
     std::vector<ShipItem> * getItems();
     bool dryAddItem(ShipItem item);
     bool dryGetItem(unsigned int itemId);
-    void Slots(unsigned int _size);
+    Slots(unsigned int _size);
+};
+
+#endif

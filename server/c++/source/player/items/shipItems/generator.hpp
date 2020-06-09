@@ -13,21 +13,20 @@
 #include "generator.hpp"
 
 class Generator:public ItemType{
-	private:
-		unsigned int maxGeneration;
-		unsigned int efficiency;
+private:
+	unsigned int maxGeneration;
+	unsigned int efficiency;
 
-	public:
-		Generator();
-
+public:
+	Generator();
 };
 
 class GeneratorItem:public Item,public ShipItem,public InternalItem{
-	private:
-		Generator *type;
+private:
+	Generator *type;
 
-	public:
-		GeneratorItem(Generator *_type);
+public:
+	GeneratorItem(Generator *_type);
 };
 
 #endif

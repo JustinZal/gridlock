@@ -3,11 +3,6 @@
 
 #include <stdexcept>
 
-// #include "shield.hpp"
-// #include "generator.hpp"
-// #include "booster.hpp"
-// #include "container.hpp"
-
 #include "constants.hpp"
 
 enum GRIDSIZE{Mini=24,Small=64,Normal=128,Large=256};

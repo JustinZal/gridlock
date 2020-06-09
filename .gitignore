@@ -47,6 +47,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+Icon?
 
 # Logs #
 *.log
@@ -74,3 +75,6 @@ server/node.js/node_modules
 *CMakeFiles
 *build
 *cmake_install.cmake
+
+# Gridlock #
+*gridlock

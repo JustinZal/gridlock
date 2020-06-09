@@ -36,6 +36,6 @@ bool Slots::dryGetItem(unsigned int itemId) {
   return itemId <= (slots.size() - 1);
 }
 
-bool Slots::Slots(unsigned int _size) {
+Slots::Slots(unsigned int _size) {
   size = _size;
 }
