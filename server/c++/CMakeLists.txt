@@ -16,6 +16,9 @@ SET (PROJECT_BINARY_DIR "${PROJECT_BINARY_DIR}/bin")
 MESSAGE ("Source path: ${PROJECT_SOURCE_DIR}")
 MESSAGE ("Binary path: ${PROJECT_BINARY_DIR}")
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 
 include_directories(
 "${CMAKE_SOURCE_DIR}/src/actions",
