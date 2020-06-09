@@ -7,20 +7,19 @@
 #include "object.hpp"
 
 class Object{
-	private:
-		Vector velocity;
-		Move moves
+private:
+	//Vector velocity;
+	//Move moves;
 
-	public:
-		void Object();
+public:
+	Object();
 
-		Vector getVelocity();
-		int getMass();
-		int getDensity();
-		int getVolume();
+	//Vector getVelocity();
+	int getMass();
+	int getDensity();
+	int getVolume();
 
-		void impact(Vector);
-
+	//void impact(Vector);
 };
 
 #endif

@@ -1,14 +1,6 @@
 #include "player.hpp"
 
-std::string Player::getToken() {
-  return token;
-}
-
-std::string Player::getName() {
-  return name;
-}
-
-void Player::Player(
+Player::Player(
   std::string _name, std::string _token,
   Slots _externalItems, Slots _internalItems
 ) {
@@ -16,4 +8,12 @@ void Player::Player(
   token = _token;
   externalItems = _externalItems;
   internalItems = _internalItems;
+}
+
+std::string Player::getToken() {
+  return token;
+}
+
+std::string Player::getName() {
+  return name;
 }

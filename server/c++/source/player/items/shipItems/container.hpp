@@ -12,21 +12,20 @@
 #include "container.hpp"
 
 class Container:public ItemType{
-	private:
-		unsigned int Volume;
+private:
+	unsigned int Volume;
 
-	public:
-		Container();
-
+public:
+	Container();
 };
 
 class ContainerItem: public Item, public ShipItem, public InternalItem {
-	private:
-		Container *type;
-		// Material *material=NULL;
+private:
+	Container *type;
+	// Material *material=NULL;
 
-	public:
-		ContainerItem(Container *_type);
+public:
+	ContainerItem(Container *_type);
 };
 
 #endif

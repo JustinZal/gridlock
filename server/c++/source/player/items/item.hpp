@@ -8,9 +8,9 @@
 #include "item.hpp"
 
 class Item {
-	private:
-		unsigned int size;
-		std::string Name;
+private:
+	unsigned int size;
+	std::string Name;
 };
 
 #endif

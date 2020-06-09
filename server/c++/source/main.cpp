@@ -2,6 +2,8 @@
 
 #include "item.hpp"
 
-int main() {
+#include "player.hpp"
+
+int main(int argc, const char * argv[]){
 	
 }

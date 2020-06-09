@@ -12,25 +12,25 @@
 #include "booster.hpp"
 
 class Booster:public ItemType{
-	private:
-		unsigned int maxPower;
-		unsigned int efficiency;
+private:
+	unsigned int maxPower;
+	unsigned int efficiency;
 
-	public:
-		Booster();
+public:
+	Booster();
 
-		unsigned int getMaxPower();
+	unsigned int getMaxPower();
 
-		unsigned int getEfficinecy();
+	unsigned int getEfficinecy();
 
 };
 
 class BoosterItem:public Item,public ShipItem{
-	private:
-		Booster *type;
+private:
+	Booster *type;
 
-	public:
-		BoosterItem(Booster *_type);
+public:
+	BoosterItem(Booster *_type);
 };
 
 #endif
