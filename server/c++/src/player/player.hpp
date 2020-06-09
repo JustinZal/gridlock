@@ -21,7 +21,7 @@ private:
 	Slots internalItems;
 
 public:
-	Player(std::string _name, std::string _token,Slots externalItems, Slots internalItems);
+	Player(std::string _name,std::string _token,Slots externalItems,Slots internalItems);
 
 	std::string getName();
 	std::string getToken();

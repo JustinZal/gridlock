@@ -7,14 +7,16 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
+#include "movement.hpp"
 #include "damage.hpp"
 #include "physicsObject.hpp"
 
 class Bullet:public ItemType{
 private:
 	Damage damage;
+	unsigned int diameter;
 public:
-	Bullet();
+	Bullet(Damage _damage);
 };
 
 class BulletItem:public Item{
@@ -26,6 +28,7 @@ public:
 class BulletProjectile:public PhysicsObject{
 private:
 	Bullet * type;
+	Movement moves[MOVESPERTURN];
 public:
 	BulletProjectile();
 };

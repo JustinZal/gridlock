@@ -9,6 +9,7 @@
 
 class Deposit{
 private:
+	//Material contained
 	//Material *material;
 	//How much of the material is present
 	unsigned int volume;

@@ -13,17 +13,24 @@
 
 class Rocket:public ItemType{
 private:
+	Damage dmagae;
+	unsigned int diameter;
 public:
+	Rocket(Damage _damage);
 };
 
 class RocketItem:public Item{
 private:
+	Rocket * type;
 public:
 };
 
 class RocketProjectile:public PhysicsObject{
 private:
+	Rocket * type;
+	Movement moves[MOVESPERTURN];
 public:
+	RocketProjectile();
 };
 
 #endif
