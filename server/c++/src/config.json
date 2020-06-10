@@ -3,9 +3,19 @@
 		{"Name":"Water","Abundance":1},
 		{"Name":"Methane","Abundance":1},
 		{"Name":"Silica","Abundance":1},
-		{"Name":"Copper ore","Abundance":1},
-		{"Name":"Iron ore","Abundance":1},
-		{"Name":"Gold ore","Abundance":1},
+		{"Name":"Orthoclase","Abundance":1},
+		{"Name":"Microcline","Abundance":1},
+		{"Name":"Gold","Abundance":1},
+		{"Name":"Magnetite","Abundance":1},
+		{"Name":"Chalcocite","Abundance":1},
+		{"Name":"Chalcopyrite","Abundance":1},
+
+
+
+
+
+
+		{"Name":"2195 Aluminium alloy","Abundance":0},
 
 		{"Name":"Silicon","Abundance":0},
 		{"Name":"Iron","Abundance":0},
@@ -31,19 +41,3 @@
 		"Enegry":1},
 	]
 }
-
-
-
-new Material("Water"),
-	new Material("Methane"),
-	new Material("Silica"),
-	new Material("Copper ore"),
-	new Material("Iron ore"),
-	new Material("Gold ore"),
-
-	new Material("Silicon"),
-	new Material("Iron"),
-	new Material("Copper"),
-	new Material("Hydrogen"),
-	new Material("Oxygen"),
-	new Material("Gold")

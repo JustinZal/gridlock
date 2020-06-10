@@ -28,7 +28,7 @@ include_directories(
 "${CMAKE_SOURCE_DIR}/src/utilities",
 "${CMAKE_SOURCE_DIR}/src/player",
 "${CMAKE_SOURCE_DIR}/src/items",
-"${CMAKE_SOURCE_DIR}/src/items/shipModules",
+"${CMAKE_SOURCE_DIR}/src/shipModules",
 "${CMAKE_SOURCE_DIR}/src/items/ammunitions")
 
 
@@ -42,11 +42,11 @@ SET(TARGET_SRC
     src/objects/deposit.cpp
     src/items/ammunitions/bullet.cpp
     src/items/ammunitions/rocket.cpp
-    src/items/shipModules/booster.cpp
-    src/items/shipModules/container.cpp
-    src/items/shipModules/generator.cpp
-    src/items/shipModules/gun.cpp
-    src/items/shipModules/shield.cpp
+    src/shipModules/booster.cpp
+    src/shipModules/container.cpp
+    src/shipModules/generator.cpp
+    src/shipModules/gun.cpp
+    src/shipModules/shield.cpp
     src/items/item.cpp
     src/player/fabricator.cpp
     src/player/player.cpp
