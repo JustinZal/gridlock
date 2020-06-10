@@ -27,9 +27,9 @@ include_directories(
 "${CMAKE_SOURCE_DIR}/src/objects",
 "${CMAKE_SOURCE_DIR}/src/utilities",
 "${CMAKE_SOURCE_DIR}/src/player",
-"${CMAKE_SOURCE_DIR}/src/player/items",
-"${CMAKE_SOURCE_DIR}/src/player/items/shipItems",
-"${CMAKE_SOURCE_DIR}/src/player/items/ammunitions")
+"${CMAKE_SOURCE_DIR}/src/items",
+"${CMAKE_SOURCE_DIR}/src/items/shipItems",
+"${CMAKE_SOURCE_DIR}/src/items/ammunitions")
 
 
 # Local source files here
@@ -40,14 +40,14 @@ SET(TARGET_SRC
     src/material/blueprint.cpp
     src/material/material.cpp
     src/objects/deposit.cpp
-    src/player/items/ammunitions/bullet.cpp
-    src/player/items/ammunitions/rocket.cpp
-    src/player/items/shipItems/booster.cpp
-    src/player/items/shipItems/container.cpp
-    src/player/items/shipItems/generator.cpp
-    src/player/items/shipItems/gun.cpp
-    src/player/items/shipItems/shield.cpp
-    src/player/items/item.cpp
+    src/items/ammunitions/bullet.cpp
+    src/items/ammunitions/rocket.cpp
+    src/items/shipItems/booster.cpp
+    src/items/shipItems/container.cpp
+    src/items/shipItems/generator.cpp
+    src/items/shipItems/gun.cpp
+    src/items/shipItems/shield.cpp
+    src/items/item.cpp
     src/player/player.cpp
     src/player/slots.cpp
     src/utilities/util.cpp
