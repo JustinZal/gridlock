@@ -7,20 +7,27 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
+#include "shipItem.hpp"
 
 #include "gun.hpp"
 
-class Gun{
+class Gun:public ItemType{
 private:
 	unsigned int magazineSize;
-	unsigned int power;
+	unsigned int maxPower;
 	unsigned int efficiency;
-	unsigned int projectile size;
+	unsigned int projectileSize;
 public:
-}
+	Gun();
+};
 
-class Gun:private Item{
-	
-}
+class GunItem:public ShipItem{
+private:
+	Gun *type;
+
+public:
+	GunItem(Gun *_type);
+	unsigned int getSize() override;
+};
 
 #endif

@@ -23,6 +23,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(
 "${CMAKE_SOURCE_DIR}/src/actions",
 "${CMAKE_SOURCE_DIR}/src/grid",
+"${CMAKE_SOURCE_DIR}/src/material",
 "${CMAKE_SOURCE_DIR}/src/objects",
 "${CMAKE_SOURCE_DIR}/src/utilities",
 "${CMAKE_SOURCE_DIR}/src/player",
@@ -36,12 +37,15 @@ SET(TARGET_SRC
     src/main.cpp
     src/grid/grid.cpp
     src/grid/node.cpp
+    src/material/blueprint.cpp
+    src/material/material.cpp
     src/objects/deposit.cpp
     src/player/items/ammunitions/bullet.cpp
     src/player/items/ammunitions/rocket.cpp
     src/player/items/shipItems/booster.cpp
     src/player/items/shipItems/container.cpp
     src/player/items/shipItems/generator.cpp
+    src/player/items/shipItems/gun.cpp
     src/player/items/shipItems/shield.cpp
     src/player/items/item.cpp
     src/player/player.cpp

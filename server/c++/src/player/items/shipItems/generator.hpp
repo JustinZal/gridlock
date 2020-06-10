@@ -21,7 +21,7 @@ public:
 	Generator();
 };
 
-class GeneratorItem:public Item,public ShipItem,public InternalItem{
+class GeneratorItem:public ShipItem,public InternalItem{
 private:
 	Generator *type;
 

@@ -38,9 +38,11 @@ private:
 public:
 	RocketProjectile(Rocket *_type,std::array<Movement,MOVESPERTURN> _moves);
 
-	Action getAction(int t) override;
-	Damage getDamage() override;
-	bool collide(unsigned int d) override;
+	Action getAction(int _t) override;
+	unsigned int getMass() override;
+	
+	Damage giveDamage() override;
+	bool takeDamage(Damage _damage) override;
 };
 
 #endif

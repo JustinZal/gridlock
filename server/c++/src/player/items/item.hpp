@@ -9,8 +9,8 @@
 
 class Item {
 private:
-	unsigned int size;
-	std::string Name;
+public:
+	virtual unsigned int getMass();
 };
 
 #endif

@@ -12,12 +12,15 @@
 class PhysicsObject{
 private:
 public:
-	//Get objects action at time (t)
-	virtual Action getAction(int t);
+	//Get objects action at time (_t)
+	virtual Action getAction(int _t);
+	//Mass of the object
+	virtual unsigned int getMass();
+
 	//Damage the objects gives when coliding
-	virtual Damage getDamage();
-	//Give collision damage (d) and output if object was destroyed
-	virtual bool collide(unsigned int d);
+	virtual Damage giveDamage();
+	//Give collision damage (_damage) and output if object was destroyed
+	virtual bool takeDamage(Damage _damage);
 };
 
 #endif

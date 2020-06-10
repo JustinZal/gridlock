@@ -22,11 +22,11 @@ std::vector<ShipItem> * Slots::getItems() {
 }
 
 bool Slots::dryAddItem(ShipItem item) {
-  const unsigned int len = item.getSize();
-  unsigned int occupied_slots = 0;
+  const unsigned int len=item.getSize();
+  unsigned int occupied_slots=0;
 
-  for (int i = 0; i < len; i++) {
-    occupied_slots += slots[i].getSize();
+  for (ShipItem element:slots){
+    occupied_slots+=element.getSize();
   }
 
   return (item.getSize() + occupied_slots) <= size;

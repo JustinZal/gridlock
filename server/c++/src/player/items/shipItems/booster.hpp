@@ -25,7 +25,7 @@ public:
 
 };
 
-class BoosterItem:public Item,public ShipItem{
+class BoosterItem:public ShipItem{
 private:
 	Booster *type;
 

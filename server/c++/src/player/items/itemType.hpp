@@ -12,6 +12,8 @@
 class ItemType{
 private:
 public:
+	virtual unsigned int getName();
+	virtual unsigned int getMass();
 };
 
 #endif

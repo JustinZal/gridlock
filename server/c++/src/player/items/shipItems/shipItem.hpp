@@ -4,9 +4,11 @@
 #include <stdexcept>
 #include "constants.hpp"
 
+#include "item.hpp"
+
 #include "shipItem.hpp"
 
-class ShipItem{
+class ShipItem:public Item{
 private:
 public:
 	virtual unsigned int getSize();

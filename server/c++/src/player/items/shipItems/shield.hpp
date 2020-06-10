@@ -21,7 +21,7 @@ public:
 	Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
 };
 
-class ShieldItem: public Item, public ShipItem, public InternalItem {
+class ShieldItem:public ShipItem,public InternalItem{
 private:
 	Shield *type;
 	unsigned int protection;

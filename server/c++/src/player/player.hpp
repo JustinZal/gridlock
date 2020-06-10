@@ -3,6 +3,7 @@
 
 #include <stdexcept>
 #include <string>
+#include <array>
 #include "constants.hpp"
 
 #include "item.hpp"
@@ -18,6 +19,8 @@ private:
 	std::string name;
 	std::string token;
 
+	unsigned int health;
+
 	Slots externalItems;
 	Slots internalItems;
 
@@ -27,9 +30,11 @@ public:
 	std::string getName();
 	std::string getToken();
 
-	Action getAction(int t) override;
-	Damage getDamage() override;
-	bool collide(unsigned int d) override;
+	Action getAction(int _t) override;
+	unsigned int getMass() override;
+
+	Damage giveDamage() override;
+	bool takeDamage(Damage _damage) override;
 };
 
 #endif

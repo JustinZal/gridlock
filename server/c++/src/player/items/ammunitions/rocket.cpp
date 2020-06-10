@@ -6,17 +6,22 @@ RocketProjectile::RocketProjectile(Rocket *_type,std::array<Movement,MOVESPERTUR
 	moves=_moves;
 }
 
-//Get objects action at time (t)
-Action RocketProjectile::getAction(int t){
-	return moves.at(t);
+//Get objects action at time (_t)
+Action RocketProjectile::getAction(int _t){
+	return moves.at(_t);
+}
+
+//Mass of the rocket
+unsigned int RocketProjectile::getMass(){
+	return 1;
 }
 
 //Damage the objects gives when coliding
-Damage RocketProjectile::getDamage(){
+Damage RocketProjectile::giveDamage(){
 	return type->getDamage();
 }
 
-//Give collision damage (d) and output if object was destroyed
-bool RocketProjectile::collide(unsigned int d){
+//Give collision damage (_damage) and output if object was destroyed
+bool RocketProjectile::takeDamage(Damage _damage){
 	return true;
 }
