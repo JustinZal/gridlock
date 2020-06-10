@@ -4,7 +4,7 @@
 #include <vector>
 #include "constants.hpp"
 
-#include "shipItem.hpp"
+#include "module.hpp"
 
 #include "slots.hpp"
 
@@ -16,9 +16,9 @@ class Slots{
 
   public:
     bool addItem(_TYPE item);
-    ShipItem * getItem(unsigned int itemId);
+    Module * getItem(unsigned int itemId);
     std::vector<Item> * getItems();
-    bool dryAddItem(ShipItem item);
+    bool dryAddItem(Module item);
     bool dryGetItem(unsigned int itemId);
     Slots(unsigned int _size);
 };

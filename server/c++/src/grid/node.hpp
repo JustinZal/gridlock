@@ -7,14 +7,17 @@
 #include "player.hpp"
 #include "deposit.hpp"
 #include "material.hpp"
+#include "module.hpp"
 
 #include "node.hpp"
 
 class Node {
   private:
+    Player * occupier=NULL;
+
     std::vector<Deposit> deposits;
     std::vector<Item> items;
-    Player * occupier=NULL;
+    std::vector<Module> modules;
 
   public:
     Node(std::vector<Deposit> _deposits);

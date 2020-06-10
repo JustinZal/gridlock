@@ -17,21 +17,17 @@
 
 
 // Ammunitions
-
-// Rocket rockets{};
-// Bullet bullets{};
-
+// const std::array<Rocket *,60> ROCKETS {};
+// const std::array<Bullet *,60> BULLETS {};
 
 // Ship items
-
-// Shield shields{};
-// Generator generators{};
-// Booster boosters{};
-// Container containers{};
-
+// const std::array<Shield *,60> SHIELDS {};
+// const std::array<Generator *,60> GENERATORS {};
+// const std::array<Booster *,60> BOOSTERS {};
+// const std::array<Container *,60> CONTAINERS {};
 
 // Materials
-std::array<Material *,60> materials {
+const std::array<Material *,60> MATERIALS {
 	new Material("Water"),
 	new Material("Methane"),
 	new Material("Silica"),
@@ -45,6 +41,10 @@ std::array<Material *,60> materials {
 	new Material("Hydrogen"),
 	new Material("Oxygen"),
 	new Material("Gold")
+};
+
+// Blueprints
+const std::array<Blueprint *,60> BLUEPRINTS {
 };
 
 #endif

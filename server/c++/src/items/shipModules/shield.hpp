@@ -6,7 +6,7 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 #include "internalItem.hpp"
 
 #include "shield.hpp"
@@ -21,7 +21,7 @@ public:
 	Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
 };
 
-class ShieldItem:public ShipItem,public InternalItem{
+class ShieldItem:public Module,public InternalItem{
 private:
 	Shield *type;
 	unsigned int protection;

@@ -7,7 +7,7 @@
 #include "constants.hpp"
 
 #include "item.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 #include "constants.hpp"
 #include "physicsObject.hpp"
 #include "fabricator.hpp"

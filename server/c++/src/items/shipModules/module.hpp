@@ -1,14 +1,14 @@
-#ifndef shipitem_h
-#define shipitem_h
+#ifndef module_h
+#define module_h
 
 #include <stdexcept>
 #include "constants.hpp"
 
 #include "item.hpp"
 
-#include "shipItem.hpp"
+#include "module.hpp"
 
-class ShipItem:public Item{
+class Module{
 private:
 public:
 	virtual unsigned int getSize();

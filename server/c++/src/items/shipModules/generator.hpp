@@ -4,10 +4,9 @@
 #include <stdexcept>
 #include "constants.hpp"
 
-
 #include "item.hpp"
 #include "itemType.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 #include "internalItem.hpp"
 
 #include "generator.hpp"
@@ -21,7 +20,7 @@ public:
 	Generator();
 };
 
-class GeneratorItem:public ShipItem,public InternalItem{
+class GeneratorItem:public Module,public InternalItem{
 private:
 	Generator *type;
 

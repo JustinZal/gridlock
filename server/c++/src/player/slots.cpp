@@ -11,7 +11,7 @@ bool Slots<_TYPE>::addItem(_TYPE item) {
 }
 
 template <class _TYPE>
-ShipItem * Slots<_TYPE>::getItem(unsigned int itemId) {
+Module * Slots<_TYPE>::getItem(unsigned int itemId) {
   if (!dryGetItem(itemId)) {
     return NULL;
   }
@@ -25,11 +25,11 @@ std::vector<Item> * Slots<_TYPE>::getItems() {
 }
 
 template <class _TYPE>
-bool Slots<_TYPE>::dryAddItem(ShipItem item) {
+bool Slots<_TYPE>::dryAddItem(Module item) {
   const unsigned int len=item.getSize();
   unsigned int occupied_slots=0;
 
-  for (ShipItem element:slots){
+  for (Module element:slots){
     occupied_slots+=element.getSize();
   }
 

@@ -7,7 +7,7 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 
 #include "gun.hpp"
 
@@ -21,7 +21,7 @@ public:
 	Gun();
 };
 
-class GunItem:public ShipItem{
+class GunItem:public Module{
 private:
 	Gun *type;
 

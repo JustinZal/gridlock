@@ -6,7 +6,7 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 #include "internalItem.hpp"
 
 #include "container.hpp"
@@ -19,7 +19,7 @@ public:
 	Container();
 };
 
-class ContainerItem:public ShipItem,public InternalItem {
+class ContainerItem:public Module,public InternalItem {
 private:
 	Container *type;
 	// Material *material=NULL;

@@ -6,7 +6,7 @@
 
 #include "item.hpp"
 #include "itemType.hpp"
-#include "shipItem.hpp"
+#include "module.hpp"
 #include "internalItem.hpp"
 
 #include "booster.hpp"
@@ -25,7 +25,7 @@ public:
 
 };
 
-class BoosterItem:public ShipItem{
+class BoosterItem:public Module{
 private:
 	Booster *type;
 

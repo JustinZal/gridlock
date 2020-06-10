@@ -1,0 +1,49 @@
+{
+	"Materials":[
+		{"Name":"Water","Abundance":1},
+		{"Name":"Methane","Abundance":1},
+		{"Name":"Silica","Abundance":1},
+		{"Name":"Copper ore","Abundance":1},
+		{"Name":"Iron ore","Abundance":1},
+		{"Name":"Gold ore","Abundance":1},
+
+		{"Name":"Silicon","Abundance":0},
+		{"Name":"Iron","Abundance":0},
+		{"Name":"Copper","Abundance":0},
+		{"Name":"Hydrogen","Abundance":0},
+		{"Name":"Oxygen","Abundance":0},
+		{"Name":"Gold","Abundance":0}	
+		
+	],
+	"Blueprints":[
+		{"Input":[
+			{"Type":"Material","Item":0,"Ammount":1}],	//Water
+		"Output":[
+			{"Type":"Material","Item":10,"Ammount":1},	//Oxygen
+			{"Type":"Material","Item":9,"Ammount":2}],	//Hidrogen
+		"Enegry":1},
+
+		{"Input":[
+			{"Type":"Material","Item":4,"Ammount":1}],	//Iron ore
+		"Output":[
+			{"Type":"Material","Item":7,"Ammount":3},	//Iron
+			{"Type":"Material","Item":9,"Ammount":4}],	//Oxygen
+		"Enegry":1},
+	]
+}
+
+
+
+new Material("Water"),
+	new Material("Methane"),
+	new Material("Silica"),
+	new Material("Copper ore"),
+	new Material("Iron ore"),
+	new Material("Gold ore"),
+
+	new Material("Silicon"),
+	new Material("Iron"),
+	new Material("Copper"),
+	new Material("Hydrogen"),
+	new Material("Oxygen"),
+	new Material("Gold")
