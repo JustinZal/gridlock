@@ -13,9 +13,9 @@ std::string Player::getName() {
 	return name;
 }
 
-Action Player::getAction(int _t){
+// Action Player::getAction(int _t){
 
-}
+// }
 
 //Mass of the bullet
 unsigned int Player::getMass(){
@@ -26,6 +26,6 @@ Damage Player::giveDamage(){
 	return Damage{10,16,18,24};
 }
 
-bool Player::takeDamage(Damage _damage){
+// bool Player::takeDamage(Damage _damage){
 
-}
+// }

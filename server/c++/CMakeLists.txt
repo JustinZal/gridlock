@@ -48,6 +48,7 @@ SET(TARGET_SRC
     src/items/shipItems/gun.cpp
     src/items/shipItems/shield.cpp
     src/items/item.cpp
+    src/player/fabricator.cpp
     src/player/player.cpp
     src/player/slots.cpp
     src/utilities/util.cpp

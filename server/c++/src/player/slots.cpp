@@ -1,6 +1,7 @@
 #include "slots.hpp"
 
-bool Slots::addItem(ShipItem item) {
+template <class _TYPE>
+bool Slots<_TYPE>::addItem(_TYPE item) {
   if (!dryAddItem(item)) {
     return false;
   }
@@ -9,7 +10,8 @@ bool Slots::addItem(ShipItem item) {
   return true;
 }
 
-ShipItem * Slots::getItem(unsigned int itemId) {
+template <class _TYPE>
+ShipItem * Slots<_TYPE>::getItem(unsigned int itemId) {
   if (!dryGetItem(itemId)) {
     return NULL;
   }
@@ -17,11 +19,13 @@ ShipItem * Slots::getItem(unsigned int itemId) {
   return &slots[itemId];
 }
 
-std::vector<ShipItem> * Slots::getItems() {
+template <class _TYPE>
+std::vector<Item> * Slots<_TYPE>::getItems() {
   return &slots;
 }
 
-bool Slots::dryAddItem(ShipItem item) {
+template <class _TYPE>
+bool Slots<_TYPE>::dryAddItem(ShipItem item) {
   const unsigned int len=item.getSize();
   unsigned int occupied_slots=0;
 
@@ -32,10 +36,12 @@ bool Slots::dryAddItem(ShipItem item) {
   return (item.getSize() + occupied_slots) <= size;
 }
 
-bool Slots::dryGetItem(unsigned int itemId) {
+template <class _TYPE>
+bool Slots<_TYPE>::dryGetItem(unsigned int itemId) {
   return itemId <= (slots.size() - 1);
 }
 
-Slots::Slots(unsigned int _size) {
+template <class _TYPE>
+Slots<_TYPE>::Slots(unsigned int _size) {
   size = _size;
 }

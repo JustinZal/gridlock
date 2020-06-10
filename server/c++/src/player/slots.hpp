@@ -6,19 +6,18 @@
 
 #include "shipItem.hpp"
 
-#include "item.hpp"
-
 #include "slots.hpp"
 
-class Slots {
+template <class _TYPE>
+class Slots{
   private:
     unsigned int size;
-    std::vector<ShipItem> slots;
+    std::vector<_TYPE> slots;
 
   public:
-    bool addItem(ShipItem item);
+    bool addItem(_TYPE item);
     ShipItem * getItem(unsigned int itemId);
-    std::vector<ShipItem> * getItems();
+    std::vector<Item> * getItems();
     bool dryAddItem(ShipItem item);
     bool dryGetItem(unsigned int itemId);
     Slots(unsigned int _size);

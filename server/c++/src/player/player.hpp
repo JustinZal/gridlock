@@ -10,6 +10,7 @@
 #include "shipItem.hpp"
 #include "constants.hpp"
 #include "physicsObject.hpp"
+#include "fabricator.hpp"
 #include "slots.hpp"
 
 #include "player.hpp"
@@ -19,10 +20,10 @@ private:
 	std::string name;
 	std::string token;
 
-	unsigned int health;
+	Fabricator fabricator();
 
-	Slots externalItems;
-	Slots internalItems;
+	Slots<Item> externalItems;
+	Slots<InternalItem> internalItems;
 
 public:
 	Player(std::string _name,std::string _token,unsigned int _externalItems,unsigned int _internalItems);

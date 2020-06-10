@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "objects.hpp"
+
 #include "player.hpp"
 #include "deposit.hpp"
 #include "bullet.hpp"
