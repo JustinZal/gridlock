@@ -50,7 +50,7 @@ class session : public std::enable_shared_from_this<session>
 public:
     // Take ownership of the socket
     explicit
-    session(tcp::socket&& socket)
+    session(boost::asio::ip::tcp::socket&& socket)
         : ws_(std::move(socket))
     {
     }

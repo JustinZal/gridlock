@@ -20,7 +20,7 @@
 class shared_state;
 
 // Accepts incoming connections and launches the sessions
-class listener : public boost::enable_shared_from_this<listener>
+class Listener : public boost::enable_shared_from_this<listener>
 {
     net::io_context& ioc_;
     tcp::acceptor acceptor_;
