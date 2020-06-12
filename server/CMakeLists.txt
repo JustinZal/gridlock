@@ -29,8 +29,8 @@ include_directories(
     src/utilities
     src/player
     src/items
-    src/shipModules
     src/items/ammunitions
+    src/shipModules
     src/webSocketServer
     )
 
@@ -39,9 +39,9 @@ SET (TARGET_SRC
     src/main.cpp
     src/grid/grid.cpp
     src/grid/node.cpp
-    #src/material/blueprint.cpp
-    #src/material/material.cpp
-    #src/objects/deposit.cpp
+    src/material/blueprint.cpp
+    src/material/material.cpp
+    src/objects/deposit.cpp
     #src/items/ammunitions/bullet.cpp
     #src/items/ammunitions/rocket.cpp
     #src/shipModules/booster.cpp
@@ -49,11 +49,11 @@ SET (TARGET_SRC
     #src/shipModules/generator.cpp
     #src/shipModules/gun.cpp
     #src/shipModules/shield.cpp
-    #src/items/item.cpp
-    #src/player/fabricator.cpp
+    src/items/item.cpp
+    src/player/fabricator.cpp
     #src/player/player.cpp
-    #src/player/slots.cpp
-    #src/utilities/util.cpp
+    src/player/slots.cpp
+    src/utilities/util.cpp
     src/webSocketServer/listener.cpp
     src/webSocketServer/webSocketSession.cpp
     )

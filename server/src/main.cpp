@@ -13,7 +13,10 @@
 #include "listener.hpp"
 #include "webSocketSession.hpp"
 
-int main(int argc,const char * argv[]){
+int main(
+    int argc,
+    const char * argv[]){
+
     // Check command line arguments.
     if (argc != 2)
     {
@@ -23,6 +26,7 @@ int main(int argc,const char * argv[]){
             "    gridlock 8080\n";
         return EXIT_FAILURE;
     }
+
     auto const address = boost::asio::ip::make_address("0.0.0.0");
     auto const port = static_cast<unsigned short>(std::atoi(argv[1]));
     auto const threads = 8;
@@ -33,7 +37,7 @@ int main(int argc,const char * argv[]){
     // Create and launch a listening port
     std::make_shared<Listener>(
         ioc,
-        boost::asio::ip::tcp::endpoint{address, port},
+        boost::asio::ip::tcp::endpoint{address,port},
         boost::make_shared<Grid>())->run();
 
     // Run the I/O service on the requested number of threads

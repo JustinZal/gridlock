@@ -61,6 +61,8 @@ void WebSocketSession::doRead(){
         boost::beast::bind_front_handler(
             &WebSocketSession::onRead,
             shared_from_this()));
+
+    std::cout << boost::beast::make_printable(buffer.data());
 }
 
 void WebSocketSession::onRead(
@@ -83,6 +85,8 @@ void WebSocketSession::onRead(
         boost::beast::bind_front_handler(
             &WebSocketSession::onWrite,
             shared_from_this()));
+
+    std::cout << boost::beast::make_printable(buffer.data());
 }
 
 void WebSocketSession::onWrite(
