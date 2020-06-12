@@ -34,3 +34,16 @@ std::string Config::get_value(
     }
     return "";
 }
+
+bool Config::exists_value(
+    const std::string& _sectionname,
+    const std::string& _keyname){
+
+    ConfigSection* sect = get_section(_sectionname);
+    if (sect != NULL) {
+        std::unordered_map<std::string, std::string>::const_iterator it = sect->keyvalues.find(_keyname);
+        if (it != sect->keyvalues.end())
+            return true;
+    }
+    return false;
+}

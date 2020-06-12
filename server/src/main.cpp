@@ -9,6 +9,8 @@
 #include <thread>
 #include <vector>
 
+#include "config.hpp"
+
 #include "grid.hpp"
 #include "listener.hpp"
 #include "webSocketSession.hpp"
@@ -17,19 +19,9 @@ int main(
     int argc,
     const char * argv[]){
 
-    // Check command line arguments.
-    if (argc != 3)
-    {
-        std::cerr <<
-            "Usage: websocket-server-async <address> <port> <threads>\n" <<
-            "Example:\n" <<
-            "    gridlock 8080\n";
-        return EXIT_FAILURE;
-    }
+    Config serverConfig("server.conf");
 
-    auto const address = boost::asio::ip::make_address(argv[1]);
-    auto const port = static_cast<unsigned short>(std::atoi(argv[2]));
-    auto const threads = 8;
+    auto const threads=8;
 
     // The io_context is required for all I/O
     boost::asio::io_context ioc{threads};
@@ -37,7 +29,11 @@ int main(
     // Create and launch a listening port
     std::make_shared<Listener>(
         ioc,
-        boost::asio::ip::tcp::endpoint{address,port},
+        boost::asio::ip::tcp::endpoint{
+            boost::asio::ip::make_address(
+                serverConfig.exists_value("host","address")?serverConfig.get_value("host","address"):"172.0.0.1"),
+            static_cast<unsigned short>(std::atoi((
+                serverConfig.exists_value("host","address")?serverConfig.get_value("host","port"):std::string("1302")).c_str()))},//!!Easter egg!!
         boost::make_shared<Grid>())->run();
 
     // Run the I/O service on the requested number of threads
