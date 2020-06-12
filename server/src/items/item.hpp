@@ -10,7 +10,7 @@
 class Item {
 private:
 public:
-	virtual unsigned int getMass();
+	virtual unsigned int getMass(){return 0;};
 };
 
 #endif

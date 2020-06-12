@@ -32,19 +32,18 @@ private:
         boost::beast::error_code ec,
         char const* what);
 
-    void do_accept();
+    void doAccept();
 
-    void on_accept(
+    void onAccept(
         boost::beast::error_code ec,
         boost::asio::ip::tcp::socket socket);
 
 public:
     Listener(
-        boost::asio::io_context& ioc_,
+        boost::asio::io_context& ioc,
         boost::asio::ip::tcp::endpoint endpoint,
         boost::shared_ptr<Grid> const& state);
 
-    // Start accepting incoming connections
     void run();
 };
 

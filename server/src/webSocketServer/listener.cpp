@@ -1,11 +1,11 @@
 #include "listener.hpp"
 
 Listener::Listener(
-    boost::asio::io_context& ioc_,
+    boost::asio::io_context& ioc,
     boost::asio::ip::tcp::endpoint endpoint,
     boost::shared_ptr<Grid> const& state)
-    :ioc(ioc_)
-    ,acceptor(ioc_){
+    :ioc(ioc)
+    ,acceptor(ioc){
 
     boost::beast::error_code ec;
 
@@ -34,8 +34,7 @@ Listener::Listener(
     }
 
     // Start listening for connections
-    acceptor.listen(
-        boost::asio::socket_base::max_listen_connections, ec);
+    acceptor.listen(boost::asio::socket_base::max_listen_connections, ec);
     if(ec)
     {
         fail(ec, "listen");
@@ -43,23 +42,23 @@ Listener::Listener(
     }
 }
 
-void Listener::do_accept(){
+void Listener::doAccept(){
 
     // The new connection gets its own strand
     acceptor.async_accept(
         boost::asio::make_strand(ioc),
         boost::beast::bind_front_handler(
-            &Listener::on_accept,
+            &Listener::onAccept,
             shared_from_this()));
 }
 
 // Start accepting incoming connections
 void Listener::run(){
 
-    do_accept();
+    doAccept();
 }
 
-void Listener::on_accept(
+void Listener::onAccept(
     boost::beast::error_code ec,
     boost::asio::ip::tcp::socket socket){
 
@@ -74,7 +73,7 @@ void Listener::on_accept(
     }
 
     // Accept another connection
-    do_accept();
+    doAccept();
 }
 
 void Listener::fail(

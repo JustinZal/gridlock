@@ -2,7 +2,7 @@
 
 WebSocketSession::WebSocketSession(
     boost::asio::ip::tcp::socket&& socket_)
-    :ws_(std::move(socket_)){
+    :ws(std::move(socket_)){
 
 
 }
@@ -14,22 +14,22 @@ void WebSocketSession::run(){
     // on the I/O objects in this session. Although not strictly necessary
     // for single-threaded contexts, this example code is written to be
     // thread-safe by default.
-    boost::asio::dispatch(ws_.get_executor(),
+    boost::asio::dispatch(ws.get_executor(),
         boost::beast::bind_front_handler(
-            &WebSocketSession::on_run,
+            &WebSocketSession::onRun,
             shared_from_this()));
 }
 
 // Start the asynchronous operation
-void WebSocketSession::on_run(){
+void WebSocketSession::onRun(){
 
     // Set suggested timeout settings for the websocket
-    ws_.set_option(
+    ws.set_option(
         boost::beast::websocket::stream_base::timeout::suggested(
             boost::beast::role_type::server));
 
     // Set a decorator to change the Server of the handshake
-    ws_.set_option(boost::beast::websocket::stream_base::decorator(
+    ws.set_option(boost::beast::websocket::stream_base::decorator(
         [](boost::beast::websocket::response_type& res)
         {
             res.set(boost::beast::http::field::server,
@@ -37,33 +37,33 @@ void WebSocketSession::on_run(){
                     " websocket-server-async");
         }));
     // Accept the websocket handshake
-    ws_.async_accept(
+    ws.async_accept(
         boost::beast::bind_front_handler(
-            &WebSocketSession::on_accept,
+            &WebSocketSession::onAccept,
             shared_from_this()));
 }
 
-void WebSocketSession::on_accept(
+void WebSocketSession::onAccept(
     boost::beast::error_code ec){
 
     if(ec)
         return fail(ec, "accept");
 
     // Read a message
-    do_read();
+    doRead();
 }
 
-void WebSocketSession::do_read(){
+void WebSocketSession::doRead(){
 
     // Read a message into our buffer
-    ws_.async_read(
-        buffer_,
+    ws.async_read(
+        buffer,
         boost::beast::bind_front_handler(
-            &WebSocketSession::on_read,
+            &WebSocketSession::onRead,
             shared_from_this()));
 }
 
-void WebSocketSession::on_read(
+void WebSocketSession::onRead(
     boost::beast::error_code ec,
     std::size_t bytes_transferred){
 
@@ -77,15 +77,15 @@ void WebSocketSession::on_read(
         fail(ec, "read");
 
     // Echo the message
-    ws_.text(ws_.got_text());
-    ws_.async_write(
-        buffer_.data(),
+    ws.text(ws.got_text());
+    ws.async_write(
+        buffer.data(),
         boost::beast::bind_front_handler(
-            &WebSocketSession::on_write,
+            &WebSocketSession::onWrite,
             shared_from_this()));
 }
 
-void WebSocketSession::on_write(
+void WebSocketSession::onWrite(
     boost::beast::error_code ec,
     std::size_t bytes_transferred){
 
@@ -95,10 +95,10 @@ void WebSocketSession::on_write(
         return fail(ec, "write");
 
     // Clear the buffer
-    buffer_.consume(buffer_.size());
+    buffer.consume(buffer.size());
 
     // Do another read
-    do_read();
+    doRead();
 }
 
 void WebSocketSession::fail(

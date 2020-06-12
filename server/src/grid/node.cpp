@@ -1,8 +1,8 @@
 #include "node.hpp"
 
-/*std::vector<Material> Node::getDeposits() {
-  return materials;
-}*/
+std::vector<Deposit> Node::getDeposits() {
+  return deposits;
+}
 
 std::vector<Item> Node::getItems() {
   return items;

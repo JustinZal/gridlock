@@ -23,10 +23,10 @@
 
 class WebSocketSession:public std::enable_shared_from_this<WebSocketSession>{
 private:
-    boost::beast::flat_buffer buffer_;
-    boost::beast::websocket::stream<boost::beast::tcp_stream> ws_;
-    boost::shared_ptr<Grid> state_;
-    std::vector<boost::shared_ptr<std::string const>> queue_;
+    boost::beast::flat_buffer buffer;
+    boost::beast::websocket::stream<boost::beast::tcp_stream> ws;
+    boost::shared_ptr<Grid> state;
+    std::vector<boost::shared_ptr<std::string const>> queue;
 
 public:
     // Take ownership of the socket
@@ -37,18 +37,18 @@ public:
     void run();
 
     // Start the asynchronous operation
-    void on_run();
+    void onRun();
 
-    void on_accept(
+    void onAccept(
         boost::beast::error_code ec);
 
-    void do_read();
+    void doRead();
 
-    void on_read(
+    void onRead(
         boost::beast::error_code ec,
         std::size_t bytes_transferred);
 
-    void on_write(
+    void onWrite(
         boost::beast::error_code ec,
         std::size_t bytes_transferred);
 

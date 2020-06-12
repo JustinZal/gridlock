@@ -21,7 +21,7 @@ class Node {
 
   public:
     Node(std::vector<Deposit> _deposits);
-    std::vector<Material> getDeposits();
+    std::vector<Deposit> getDeposits();
     std::vector<Item> getItems();
     Player * getOccupier();
     void setOccupier(Player *_occupier);
