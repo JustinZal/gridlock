@@ -1,5 +1,5 @@
-#ifndef vector_h
-#define vector_h
+#ifndef GRIDLOCK_VECTOR_HPP
+#define GRIDLOCK_VECTOR_HPP
 
 #include "vector.hpp"
 

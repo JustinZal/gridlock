@@ -1,5 +1,5 @@
-#ifndef constants_h
-#define constants_h
+#ifndef GRIDLOCK_CONSTANTS_HPP
+#define GRIDLOCK_CONSTANTS_HPP
 
 #include <stdexcept>
 

@@ -22,10 +22,14 @@
 #include "webSocketSession.hpp"
 
 class WebSocketSession:public std::enable_shared_from_this<WebSocketSession>{
+
 private:
     boost::beast::flat_buffer buffer;
+
     boost::beast::websocket::stream<boost::beast::tcp_stream> ws;
+
     boost::shared_ptr<Grid> state;
+    
     std::vector<boost::shared_ptr<std::string const>> queue;
 
 public:

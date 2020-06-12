@@ -23,9 +23,12 @@
 #include "listener.hpp"
 
 class Listener:public std::enable_shared_from_this<Listener>{
+
 private:
     boost::asio::io_context& ioc;
+
     boost::asio::ip::tcp::acceptor acceptor;
+    
     boost::shared_ptr<Grid> grid;
 
     void fail(

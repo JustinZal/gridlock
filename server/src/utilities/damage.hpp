@@ -1,5 +1,5 @@
-#ifndef damage_h
-#define damage_h
+#ifndef GRIDLOCK_DAMAGE_HPP
+#define GRIDLOCK_DAMAGE_HPP
 
 struct Damage{
   unsigned int minShield;
