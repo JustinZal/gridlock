@@ -71,8 +71,8 @@ Icon?
 /vendor
 composer.lock
 server/node.js/node_modules
-*/server/Makefile
-*/client/Makefile
+server/Makefile
+client/Makefile
 *CMakeCache.txt
 *CMakeFiles
 *build
