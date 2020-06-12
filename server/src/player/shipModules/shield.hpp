@@ -1,5 +1,5 @@
-#ifndef shield_h
-#define shield_h
+#ifndef GRIDLOCK_SHIELD_HPP
+#define GRIDLOCK_SHIELD_HPP
 
 #include <stdexcept>
 #include "constants.hpp"
@@ -12,22 +12,31 @@
 #include "shield.hpp"
 
 class Shield:public ItemType{
+
 private:
 	unsigned int maxProtection;
+
 	unsigned int maxRechargeRate;
+
 	unsigned int Efficiency;
 
 public:
-	Shield(unsigned int _maxProtection,unsigned int _maxRechargeRate,unsigned int _Efficiency);
+	Shield(
+		unsigned int _maxProtection,
+		unsigned int _maxRechargeRate,
+		unsigned int _Efficiency);
 };
 
 class ShieldItem:public Module,public InternalItem{
+
 private:
 	Shield *type;
+
 	unsigned int protection;
 
 public:
-	ShieldItem(Shield *_type);
+	ShieldItem(
+		Shield *_type);
 
 	unsigned int getProtection();
 

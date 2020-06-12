@@ -1,5 +1,5 @@
-#ifndef rocket_h
-#define rocket_h
+#ifndef GRIDLOCK_ROCKET_HPP
+#define GRIDLOCK_ROCKET_HPP
 
 #include <stdexcept>
 #include <string>
@@ -15,34 +15,47 @@
 #include "rocket.hpp"
 
 class Rocket:public ItemType{
+
 private:
 	Damage damage;
 	unsigned int diameter;
+
 public:
-	Rocket(Damage _damage);
+	Rocket(
+		Damage _damage);
 
 	Damage getDamage();
 	unsigned int getDiameter();
 };
 
 class RocketItem:public Item{
+
 private:
 	Rocket * type;
+
 public:
 };
 
 class RocketProjectile:public PhysicsObject{
+
 private:
 	Rocket * type;
 	std::array<Movement,MOVESPERTURN> moves;
-public:
-	RocketProjectile(Rocket *_type,std::array<Movement,MOVESPERTURN> _moves);
 
-	Action getAction(int _t) override;
+public:
+	RocketProjectile(
+		Rocket *_type,std::array<Movement,
+		MOVESPERTURN> _moves);
+
+	Action getAction(
+		int _t) override;
+
 	unsigned int getMass() override;
 	
 	Damage giveDamage() override;
-	bool takeDamage(Damage _damage) override;
+
+	bool takeDamage(
+		Damage _damage) override;
 };
 
 #endif

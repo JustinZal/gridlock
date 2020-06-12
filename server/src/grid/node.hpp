@@ -1,5 +1,5 @@
-#ifndef node_h
-#define node_h
+#ifndef GRIDLOCK_NODE_HPP
+#define GRIDLOCK_NODE_HPP
 
 #include <vector>
 
@@ -12,6 +12,7 @@
 #include "node.hpp"
 
 class Node {
+
   private:
     Player * occupier=NULL;
 
@@ -20,12 +21,20 @@ class Node {
     std::vector<Module> modules;
 
   public:
-    Node(std::vector<Deposit> _deposits);
+    Node(
+        std::vector<Deposit> _deposits);
+
     std::vector<Deposit> getDeposits();
+
     std::vector<Item> getItems();
+
     Player * getOccupier();
-    void setOccupier(Player *_occupier);
-    void setItems(std::vector<Item> _items);
+
+    void setOccupier(
+        Player *_occupier);
+
+    void setItems(
+        std::vector<Item> _items);
 };
 
 #endif

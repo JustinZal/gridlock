@@ -54,6 +54,7 @@ SET (TARGET_SRC
     #src/player/player.cpp
     src/player/slots.cpp
     src/utilities/util.cpp
+    src/utilities/config.cpp
     src/webSocketServer/listener.cpp
     src/webSocketServer/webSocketSession.cpp
     )

@@ -1,5 +1,5 @@
-#ifndef fabricator_h
-#define fabricator_h
+#ifndef GRIDLOCK_FABRICATOR_HPP
+#define GRIDLOCK_FABRICATOR_HPP
 
 #include <stdexcept>
 #include <string>
@@ -12,9 +12,12 @@
 #include "fabricator.hpp"
 
 class Fabricator{
+
 private:
+
 public:
 	bool research();
+	
 	bool fabricate();
 };
 

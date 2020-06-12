@@ -1,5 +1,5 @@
-#ifndef movement_h
-#define movement_h
+#ifndef GRIDLOCK_MOVEMENT_HPP
+#define GRIDLOCK_MOVEMENT_HPP
 
 #include <stdexcept>
 #include <string>
@@ -9,9 +9,11 @@
 
 #include "movement.hpp"
 
-class Movement:public Action{
+class Movement:public Action:public Action{
+	
 private:
 	DIRECTION Direction;
+	
 public:
 	Movement();
 	Movement(DIRECTION _dircetion);

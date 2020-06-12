@@ -1,5 +1,5 @@
-#ifndef slots_h
-#define slots_h
+#ifndef GRIDLOCK_SLOTS_HPP
+#define GRIDLOCK_SLOTS_HPP
 
 #include <vector>
 #include "constants.hpp"
@@ -10,17 +10,29 @@
 
 template <class _TYPE>
 class Slots{
+
   private:
     unsigned int size;
+
     std::vector<_TYPE> slots;
 
   public:
-    bool addItem(_TYPE item);
-    Module * getItem(unsigned int itemId);
+    bool addItem(
+        _TYPE item);
+
+    Module * getItem(
+        unsigned int itemId);
+
     std::vector<Item> * getItems();
-    bool dryAddItem(Module item);
-    bool dryGetItem(unsigned int itemId);
-    Slots(unsigned int _size);
+
+    bool dryAddItem(
+        Module item);
+
+    bool dryGetItem(
+        unsigned int itemId);
+
+    Slots(
+        unsigned int _size);
 };
 
 #endif

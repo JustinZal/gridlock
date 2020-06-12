@@ -1,10 +1,13 @@
-#ifndef action_h
-#define action_h
+#ifndef GRIDLOCK_ACTION_HPP
+#define GRIDLOCK_ACTION_HPP
 
 class Action{
+	
 private:
+	
 public:
 	virtual bool dryExecute();
+
 	virtual bool execute();
 };
 

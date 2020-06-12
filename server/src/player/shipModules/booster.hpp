@@ -1,5 +1,5 @@
-#ifndef booster_h
-#define booster_h
+#ifndef GRIDLOCK_BOOSTER_HPP
+#define GRIDLOCK_BOOSTER_HPP
 
 #include <stdexcept>
 #include "constants.hpp"
@@ -12,8 +12,10 @@
 #include "booster.hpp"
 
 class Booster:public ItemType{
+
 private:
 	unsigned int maxPower;
+
 	unsigned int efficiency;
 
 public:
@@ -26,11 +28,14 @@ public:
 };
 
 class BoosterItem:public Module{
+
 private:
 	Booster *type;
 
 public:
-	BoosterItem(Booster *_type);
+	BoosterItem(
+		Booster *_type);
+
 	unsigned int getSize() override;
 };
 

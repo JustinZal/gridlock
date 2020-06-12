@@ -62,6 +62,8 @@ void Listener::onAccept(
     boost::beast::error_code ec,
     boost::asio::ip::tcp::socket socket){
 
+    std::cerr << socket.remote_endpoint().address().to_string();
+
     if(ec)
     {
         fail(ec, "accept");

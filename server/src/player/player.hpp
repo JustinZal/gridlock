@@ -1,5 +1,5 @@
-#ifndef player_h
-#define player_h
+#ifndef GRIDLOCK_PLAYER_HPP
+#define GRIDLOCK_PLAYER_HPP
 
 #include <stdexcept>
 #include <string>
@@ -16,26 +16,39 @@
 #include "player.hpp"
 
 class Player:public PhysicsObject{
+
 private:
+
 	std::string name;
+
 	std::string token;
 
 	Fabricator fabricator();
 
 	Slots<Item> externalItems;
+
 	Slots<InternalItem> internalItems;
 
 public:
-	Player(std::string _name,std::string _token,unsigned int _externalItems,unsigned int _internalItems);
+	Player(
+		std::string _name,
+		std::string _token,
+		unsigned int _externalItems,
+		unsigned int _internalItems);
 
 	std::string getName();
+
 	std::string getToken();
 
-	Action getAction(int _t) override;
+	Action getAction(
+		int _t) override;
+
 	unsigned int getMass() override;
 
 	Damage giveDamage() override;
-	bool takeDamage(Damage _damage) override;
+
+	bool takeDamage(
+		Damage _damage) override;
 };
 
 #endif

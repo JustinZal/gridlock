@@ -1,5 +1,5 @@
-#ifndef module_h
-#define module_h
+#ifndef GRIDLOCK_MODULE_HPP
+#define GRIDLOCK_MODULE_HPP
 
 #include <stdexcept>
 #include "constants.hpp"
@@ -9,7 +9,9 @@
 #include "module.hpp"
 
 class Module{
+
 private:
+	
 public:
 	virtual unsigned int getSize();
 };

@@ -1,5 +1,5 @@
-#ifndef blueprint_h
-#define blueprint_h
+#ifndef GRIDLOCK_BLUEPRINT_HPP
+#define GRIDLOCK_BLUEPRINT_HPP
 
 #include <stdexcept>
 #include <string>
@@ -13,10 +13,13 @@
 #include "blueprint.hpp"
 
 class Blueprint{
+
 private:
 	std::vector<Material> materials;
+
 public:
 	Blueprint();
+	
 	bool Craft();
 };
 

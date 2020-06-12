@@ -1,5 +1,5 @@
-#ifndef container_h
-#define container_h
+#ifndef GRIDLOCK_CONTAINER_HPP
+#define GRIDLOCK_CONTAINER_HPP
 
 #include <stdexcept>
 #include "constants.hpp"
@@ -12,6 +12,7 @@
 #include "container.hpp"
 
 class Container:public ItemType{
+
 private:
 	unsigned int Volume;
 
@@ -20,12 +21,16 @@ public:
 };
 
 class ContainerItem:public Module,public InternalItem {
+
 private:
 	Container *type;
+
 	// Material *material=NULL;
 
 public:
-	ContainerItem(Container *_type);
+	ContainerItem(
+		Container *_type);
+	
 	unsigned int getSize() override;
 };
 

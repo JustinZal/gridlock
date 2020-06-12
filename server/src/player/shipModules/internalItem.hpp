@@ -1,5 +1,5 @@
-#ifndef internalItem_h
-#define internalItem_h
+#ifndef GRIDLOCK_INTERNALITEM_HPP
+#define GRIDLOCK_INTERNALITEM_HPP
 
 #include <stdexcept>
 #include "constants.hpp"

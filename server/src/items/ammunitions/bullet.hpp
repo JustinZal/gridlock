@@ -1,5 +1,5 @@
-#ifndef bullet_h
-#define bullet_h
+#ifndef GRIDLOCK_BULLET_HPP
+#define GRIDLOCK_BULLET_HPP
 
 #include <stdexcept>
 #include <string>
@@ -15,34 +15,49 @@
 #include "bullet.hpp"
 
 class Bullet:public ItemType{
+
 private:
 	Damage damage;
 	unsigned int diameter;
+	
 public:
-	Bullet(Damage _damage);
+	Bullet(
+		Damage _damage);
 
 	Damage getDamage();
+
 	unsigned int getDiameter();
 };
 
 class BulletItem:public Item{
+	
 private:
 	Bullet * type;
+
 public:
 };
 
 class BulletProjectile:public PhysicsObject{
+
 private:
 	Bullet * type;
 	std::array<Movement,MOVESPERTURN> moves;
-public:
-	BulletProjectile(Bullet *_type,std::array<Movement,MOVESPERTURN> _moves);
 
-	Action getAction(int _t) override;
+public:
+	BulletProjectile(
+		Bullet *_type,
+		std::array<Movement,
+		MOVESPERTURN> _moves);
+
+	Action getAction(
+		int _t) override;
+
 	unsigned int getMass() override;
 
 	Damage giveDamage() override;
-	bool takeDamage(Damage _damage) override;
+
+	bool takeDamage(
+		Damage _damage) override;
 };
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef gun_h
-#define gun_h
+#ifndef GRIDLOCK_GUN_HPP
+#define GRIDLOCK_GUN_HPP
 
 #include <stdexcept>
 #include <string>
@@ -12,21 +12,29 @@
 #include "gun.hpp"
 
 class Gun:public ItemType{
+
 private:
 	unsigned int magazineSize;
+
 	unsigned int maxPower;
+
 	unsigned int efficiency;
+
 	unsigned int projectileSize;
+
 public:
 	Gun();
 };
 
 class GunItem:public Module{
+
 private:
 	Gun *type;
 
 public:
-	GunItem(Gun *_type);
+	GunItem(
+		Gun *_type);
+	
 	unsigned int getSize() override;
 };
 
