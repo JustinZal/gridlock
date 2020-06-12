@@ -18,7 +18,7 @@ int main(
     const char * argv[]){
 
     // Check command line arguments.
-    if (argc != 2)
+    if (argc != 3)
     {
         std::cerr <<
             "Usage: websocket-server-async <address> <port> <threads>\n" <<
@@ -27,8 +27,8 @@ int main(
         return EXIT_FAILURE;
     }
 
-    auto const address = boost::asio::ip::make_address("127.0.0.1");
-    auto const port = static_cast<unsigned short>(std::atoi(argv[1]));
+    auto const address = boost::asio::ip::make_address(argv[1]);
+    auto const port = static_cast<unsigned short>(std::atoi(argv[2]));
     auto const threads = 8;
 
     // The io_context is required for all I/O
