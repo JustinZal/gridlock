@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION "3.17.3")
 # Version Information ---------------------------------------------------------
 project(gridlock)
 SET (GRIDLOCK_MAJOR_VERSION 0)
-SET (GRIDLOCK_MINOR_VERSION 8)
-SET (GRIDLOCK_PATCH_VERSION 2)
+SET (GRIDLOCK_MINOR_VERSION 0)
+SET (GRIDLOCK_PATCH_VERSION 0)
 SET (VERSION "${GRIDLOCK_MAJOR_VERSION}.${GRIDLOCK_MINOR_VERSION}.${GRIDLOCK_PATCH_VERSION}")
 MESSAGE ("Version: ${VERSION}")
 
@@ -30,7 +30,7 @@ include_directories(
     src/player
     src/items
     src/items/ammunitions
-    src/shipModules
+    src/player/shipModules
     src/webSocketServer
     )
 
@@ -44,11 +44,11 @@ SET (TARGET_SRC
     src/objects/deposit.cpp
     #src/items/ammunitions/bullet.cpp
     #src/items/ammunitions/rocket.cpp
-    #src/shipModules/booster.cpp
-    #src/shipModules/container.cpp
-    #src/shipModules/generator.cpp
-    #src/shipModules/gun.cpp
-    #src/shipModules/shield.cpp
+    #src/player/shipModules/booster.cpp
+    #src/player/shipModules/container.cpp
+    #src/player/shipModules/generator.cpp
+    #src/player/shipModules/gun.cpp
+    #src/player/shipModules/shield.cpp
     src/items/item.cpp
     src/player/fabricator.cpp
     #src/player/player.cpp

@@ -27,7 +27,7 @@ int main(
         return EXIT_FAILURE;
     }
 
-    auto const address = boost::asio::ip::make_address("0.0.0.0");
+    auto const address = boost::asio::ip::make_address("127.0.0.1");
     auto const port = static_cast<unsigned short>(std::atoi(argv[1]));
     auto const threads = 8;
 

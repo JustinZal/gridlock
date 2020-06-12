@@ -62,7 +62,7 @@ void WebSocketSession::doRead(){
             &WebSocketSession::onRead,
             shared_from_this()));
 
-    std::cout << boost::beast::make_printable(buffer.data());
+    std::cerr << boost::beast::make_printable(buffer.data()) << "\n";
 }
 
 void WebSocketSession::onRead(
