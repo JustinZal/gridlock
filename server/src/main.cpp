@@ -8,6 +8,9 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
 
 #include "config.hpp"
 
@@ -19,7 +22,7 @@ int main(
     int argc,
     const char * argv[]){
 
-    Config serverConfig("server.conf");
+    Config serverConfig(std::string(getpwuid(getuid())->pw_dir)+std::string("/.gridlock/server.conf"));
 
     auto const threads=8;
 
@@ -31,7 +34,7 @@ int main(
         ioc,
         boost::asio::ip::tcp::endpoint{
             boost::asio::ip::make_address(
-                serverConfig.exists_value("host","address")?serverConfig.get_value("host","address"):"172.0.0.1"),
+                (serverConfig.exists_value("host","address")?serverConfig.get_value("host","address"):std::string("0.0.0.0")).c_str()),
             static_cast<unsigned short>(std::atoi((
                 serverConfig.exists_value("host","address")?serverConfig.get_value("host","port"):std::string("1302")).c_str()))},//!!Easter egg!!
         boost::make_shared<Grid>())->run();
