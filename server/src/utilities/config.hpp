@@ -35,6 +35,10 @@ public:
     std::string get_value(
     	const std::string& _sectionname,
     	const std::string& _keyname);
+
+    bool exists_value(
+        const std::string& _sectionname,
+        const std::string& _keyname);
 };
 
 #endif
