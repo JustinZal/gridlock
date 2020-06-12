@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <unordered_map>
 #include <list>
+#include <filesystem>
+#include <cstdlib>
 
 #include "config.hpp"
 
