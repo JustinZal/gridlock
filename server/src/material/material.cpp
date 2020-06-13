@@ -11,6 +11,18 @@ Material::Material(
 	mass=_mass;
 }
 
+unsigned int Material::getAbundance(){
+	return abundance;
+}
+
+unsigned int Material::getAccessibility(){
+	return accessibility;
+}
+
+unsigned int Material::getMass(){
+	return mass;
+}
+
 std::string Material::getName(){
 	return name;
 }

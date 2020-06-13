@@ -1,7 +1,7 @@
 #include "node.hpp"
 
 Node::Node(
-	std::vector<std::shared_ptr<Deposit>> _deposits,
+	std::vector<std::shared_ptr<Material>> _Material,
 	unsigned int _posX,
 	unsigned int _posY,
 	unsigned long _seed){

@@ -27,6 +27,13 @@ public:
 		unsigned int _mass);
 	
 	std::string getName();
+
+	unsigned int getAbundance();
+
+	unsigned int getAccessibility();
+
+	unsigned int getMass();
+
 };
 
 #endif
