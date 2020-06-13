@@ -28,14 +28,17 @@ private:
 
     boost::beast::websocket::stream<boost::beast::tcp_stream> ws;
 
-    boost::shared_ptr<Grid> state;
+    boost::shared_ptr<Grid> grid;
     
     std::vector<boost::shared_ptr<std::string const>> queue;
 
 public:
     // Take ownership of the socket
-    explicit WebSocketSession(
-        boost::asio::ip::tcp::socket&& socket_);
+    WebSocketSession(
+        boost::asio::ip::tcp::socket&& _socket,
+        boost::shared_ptr<Grid> const& _grid);
+
+    ~WebSocketSession();
 
     // Get on the correct executor
     void run();

@@ -1,10 +1,16 @@
 #include "webSocketSession.hpp"
 
 WebSocketSession::WebSocketSession(
-    boost::asio::ip::tcp::socket&& socket_)
-    :ws(std::move(socket_)){
+    boost::asio::ip::tcp::socket&& _socket,
+    boost::shared_ptr<Grid> const& _grid):
+    ws(std::move(_socket)),
+    grid(_grid){
 
 
+}
+
+WebSocketSession::~WebSocketSession(){
+    //grid->leave(this);
 }
 
 // Get on the correct executor

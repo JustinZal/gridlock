@@ -43,9 +43,9 @@ private:
 
 public:
     Listener(
-        boost::asio::io_context& ioc,
-        boost::asio::ip::tcp::endpoint endpoint,
-        boost::shared_ptr<Grid> const& state);
+        boost::asio::io_context& _ioc,
+        boost::asio::ip::tcp::endpoint _endpoint,
+        boost::shared_ptr<Grid> const& _state);
 
     void run();
 };

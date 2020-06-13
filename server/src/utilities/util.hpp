@@ -3,6 +3,11 @@
 
 #include <stdexcept>
 #include <vector>
+#include <cstdio>
+#include <iostream>
+#include <memory>
+#include <string>
+#include <array>
 
 #include "util.hpp"
 
@@ -15,5 +20,7 @@ T randomElement(
 template <class T>
 T weightedDistribution(
 	std::vector<T,int> probabilityPairs);
+
+std::string exec(const char* cmd);
 
 #endif

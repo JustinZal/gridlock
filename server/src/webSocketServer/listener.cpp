@@ -1,16 +1,17 @@
 #include "listener.hpp"
 
 Listener::Listener(
-    boost::asio::io_context& ioc,
-    boost::asio::ip::tcp::endpoint endpoint,
-    boost::shared_ptr<Grid> const& state)
-    :ioc(ioc)
-    ,acceptor(ioc){
+    boost::asio::io_context& _ioc,
+    boost::asio::ip::tcp::endpoint _endpoint,
+    boost::shared_ptr<Grid> const& _grid):
+    ioc(_ioc),
+    acceptor(_ioc),
+    grid(_grid){
 
     boost::beast::error_code ec;
 
     // Open the acceptor
-    acceptor.open(endpoint.protocol(), ec);
+    acceptor.open(_endpoint.protocol(), ec);
     if(ec)
     {
         fail(ec, "open");
@@ -26,7 +27,7 @@ Listener::Listener(
     }
 
     // Bind to the server address
-    acceptor.bind(endpoint, ec);
+    acceptor.bind(_endpoint, ec);
     if(ec)
     {
         fail(ec, "bind");
@@ -62,7 +63,7 @@ void Listener::onAccept(
     boost::beast::error_code ec,
     boost::asio::ip::tcp::socket socket){
 
-    std::cerr << socket.remote_endpoint().address().to_string();
+    std::cerr << socket.remote_endpoint().address().to_string() << std::endl;
 
     if(ec)
     {
@@ -71,7 +72,7 @@ void Listener::onAccept(
     else
     {
         // Create the session and run it
-        std::make_shared<WebSocketSession>(std::move(socket))->run();
+        std::make_shared<WebSocketSession>(std::move(socket),grid)->run();
     }
 
     // Accept another connection
