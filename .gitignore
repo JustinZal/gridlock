@@ -85,4 +85,4 @@ client/Makefile
 *.x.*
 
 # cLine files #
-/.idea
+.idea/
