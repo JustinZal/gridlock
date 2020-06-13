@@ -1,25 +1,23 @@
 #include "node.hpp"
 
-std::vector<Deposit> Node::getDeposits() {
-  return deposits;
+Node::Node(
+	std::vector<Deposit> _deposits){
+
+  //deposits = _deposits;
 }
 
-std::vector<Item> Node::getItems() {
-  return items;
+std::shared_ptr<OccupyingObject> Node::getOccupant(){
+
+  return occupant;
 }
 
-Player * Node::getOccupier() {
-  return occupier;
+void Node::setOccupant(
+	std::shared_ptr<OccupyingObject> _occupant){
+
+  occupant = _occupant;
 }
 
-void Node::setOccupier(Player *_occupier) {
-  occupier = _occupier;
-}
+std::vector<std::shared_ptr<NonOccupyingObject>> Node::getObjects(){
 
-void Node::setItems(std::vector<Item> _items) {
-  items.insert(_items.end(),_items.begin(),_items.end());
-}
-
-Node::Node(std::vector<Deposit> _deposits) {
-  deposits = _deposits;
+	return objects;
 }

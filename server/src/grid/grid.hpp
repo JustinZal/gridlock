@@ -5,9 +5,11 @@
 #include <mutex>
 #include "constants.hpp"
 
+#include "player.hpp"
 #include "node.hpp"
 
 #include "grid.hpp"
+
 
 class Grid{
 
@@ -15,8 +17,9 @@ private:
 	// This mutex synchronizes all access to we socket sessions
 	std::mutex mutex_;
 
+	std::vector<std::shared_ptr<Player>> players;
+
 	//Node *grid[][]=NULL;
-	//std::vector<Location> players;
 
 public:
 	Grid(

@@ -8,33 +8,36 @@
 #include "deposit.hpp"
 #include "material.hpp"
 #include "module.hpp"
+#include "nonOccupyingObject.hpp"
+#include "occupyingObject.hpp"
+#include "player.hpp"
 
 #include "node.hpp"
 
 class Node {
 
   private:
-    Player * occupier=NULL;
+    //Occupant of node (eg: Player)
+    std::shared_ptr<OccupyingObject> occupant=nullptr;
 
-    std::vector<Deposit> deposits;
-    std::vector<Item> items;
-    std::vector<Module> modules;
+    //List of objects in node (eg: Bullet, Rocket)
+    std::vector<std::shared_ptr<NonOccupyingObject>> objects;
+
+    //Collectables
+    //std::vector<std::shared_ptr<Depost>> deposits=nullptr;
 
   public:
     Node(
         std::vector<Deposit> _deposits);
 
-    std::vector<Deposit> getDeposits();
+    std::shared_ptr<OccupyingObject> getOccupant();
 
-    std::vector<Item> getItems();
+    void setOccupant(
+        std::shared_ptr<OccupyingObject> _occupant);
 
-    Player * getOccupier();
+    std::vector<std::shared_ptr<NonOccupyingObject>> getObjects();
 
-    void setOccupier(
-        Player *_occupier);
-
-    void setItems(
-        std::vector<Item> _items);
+    //std::vector<std::shared_ptr<Deposit>> getDeposits();
 };
 
 #endif
