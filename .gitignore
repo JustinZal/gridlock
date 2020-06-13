@@ -83,3 +83,6 @@ client/Makefile
 
 # example files #
 *.x.*
+
+# cLine files #
+/.idea

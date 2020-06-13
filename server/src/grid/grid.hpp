@@ -11,20 +11,23 @@
 #include "grid.hpp"
 
 
+template <unsigned int _SIZE>
 class Grid{
 
 private:
 	// This mutex synchronizes all access to we socket sessions
 	std::mutex mutex_;
 
+	// List of players
 	std::vector<std::shared_ptr<Player>> players;
 
-	//Node *grid[][]=NULL;
+	// Array of nodes, main grid
+	std::array<std::shared_prt<Node>,_SIZE> grid;
 
 public:
 	Grid(
-		unsigned int _size=20,
-		unsigned int playerExternalItems=4,
+		unsigned long _seed,
+		unsigned int _playerExternalItems=4,
 		unsigned int _playerInternalItems=20);
 
 	void Populate();
