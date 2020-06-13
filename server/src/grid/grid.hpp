@@ -20,7 +20,7 @@ private:
 
 public:
 	Grid(
-		GRIDSIZE _size=Normal,
+		unsigned int _size=20,
 		unsigned int playerExternalItems=4,
 		unsigned int _playerInternalItems=20);
 

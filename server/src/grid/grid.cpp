@@ -1,6 +1,6 @@
 #include "grid.hpp"
 
-Grid::Grid(GRIDSIZE _size,unsigned int playerExternalItems,unsigned int _playerInternalItems){
+Grid::Grid(unsigned int _size,unsigned int playerExternalItems,unsigned int _playerInternalItems){
 }
 
 

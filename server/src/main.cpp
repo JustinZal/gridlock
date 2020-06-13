@@ -28,6 +28,20 @@ int main(
 
     Config serverConfig(std::string(getpwuid(getuid())->pw_dir)+std::string("/.gridlock/server/server.conf"));
 
+    unsigned int gridSize;
+    unsigned int playerCount;
+
+    std::cerr << "Grid size: ";
+    std::cin >> gridSize;
+    std::cerr << "\n";
+
+    std::cerr << "Player count: ";
+    std::cin >> playerCount;
+    std::cerr << "\n";
+
+    auto const address=(serverConfig.existsValue("host","address")?serverConfig.getValue("host","address"):
+        exec("printf `ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`")).c_str();
+    auto const port=(serverConfig.existsValue("host","port")?serverConfig.getValue("host","port"):std::string("1302")).c_str();//!!Easter egg!!
     auto const threads=8;
 
     // The io_context is required for all I/O
@@ -37,12 +51,17 @@ int main(
     std::make_shared<Listener>(
         ioc,
         boost::asio::ip::tcp::endpoint{
-            boost::asio::ip::make_address(
-                (serverConfig.exists_value("host","address")?serverConfig.get_value("host","address"):
-                    exec("printf `ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`")).c_str()),
-            static_cast<unsigned short>(std::atoi((
-                serverConfig.exists_value("host","port")?serverConfig.get_value("host","port"):std::string("1302")).c_str()))},//!!Easter egg!!
-        boost::make_shared<Grid>())->run();
+            boost::asio::ip::make_address(address),
+            static_cast<unsigned short>(std::atoi(port))},
+        boost::make_shared<Grid>(gridSize,4,4))->run();
+
+    std::cerr << "[Enter] to start the server, [commant+c] to end:";
+    std::cin.sync();
+    std::cin.get();
+    std::cin.ignore();
+    std::cerr << "\n";
+
+    std::cerr << "Starting server at " << address << ":" << port << "\n\n";
 
     // Capture SIGINT and SIGTERM to perform a clean shutdown
     boost::asio::signal_set signals(ioc,SIGINT,SIGTERM);

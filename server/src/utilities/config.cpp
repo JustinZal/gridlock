@@ -54,12 +54,12 @@ Config::Config(
     }
 }
 
-std::list<ConfigSection>& Config::get_sections(){
+std::list<ConfigSection>& Config::getSections(){
 
 	return sections;
 }
 
-ConfigSection* Config::get_section(
+ConfigSection* Config::getSection(
 	const std::string& _sectionname){
 
 	std::list<ConfigSection>::iterator found = std::find_if(sections.begin(), sections.end(), [_sectionname](const ConfigSection& sect){
@@ -70,11 +70,11 @@ ConfigSection* Config::get_section(
     return found != sections.end() ? &*found : NULL;
 }
 
-std::string Config::get_value(
+std::string Config::getValue(
 	const std::string& _sectionname,
 	const std::string& _keyname){
 
-	ConfigSection* sect = get_section(_sectionname);
+	ConfigSection* sect = getSection(_sectionname);
     if (sect != NULL) {
         std::unordered_map<std::string, std::string>::const_iterator it = sect->keyvalues.find(_keyname);
         if (it != sect->keyvalues.end())
@@ -83,11 +83,11 @@ std::string Config::get_value(
     return "";
 }
 
-bool Config::exists_value(
+bool Config::existsValue(
         const std::string& _sectionname,
         const std::string& _keyname){
 
-    ConfigSection* sect = get_section(_sectionname);
+    ConfigSection* sect = getSection(_sectionname);
     if (sect != NULL) {
         std::unordered_map<std::string, std::string>::const_iterator it = sect->keyvalues.find(_keyname);
         if (it != sect->keyvalues.end())

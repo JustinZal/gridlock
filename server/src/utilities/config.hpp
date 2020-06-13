@@ -28,16 +28,16 @@ public:
 	Config(
 		const std::string& _filename);
 
-	std::list<ConfigSection>& get_sections();
+	std::list<ConfigSection>& getSections();
 
-    ConfigSection* get_section(
+    ConfigSection* getSection(
     	const std::string& _sectionname);
 
-    std::string get_value(
+    std::string getValue(
     	const std::string& _sectionname,
     	const std::string& _keyname);
 
-    bool exists_value(
+    bool existsValue(
         const std::string& _sectionname,
         const std::string& _keyname);
 };
