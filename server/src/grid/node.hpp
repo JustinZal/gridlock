@@ -25,14 +25,26 @@ class Node {
     std::vector<std::shared_ptr<NonOccupyingObject>> objects;
 
     //List of dropable items and deposits
-    std::vector<std::shared_ptr<NonPhysicsObject>> debrees;
+    std::vector<std::shared_ptr<NonPhysicsObject>> debris;
 
+    const unsigned int posX;
+
+    const unsigned int posY;
+
+
+    //Base Node constructor posX and posY not currently implemented
   public:
+	Node(
+		unsigned int _posX,
+		unsigned int _posY);
+
     Node(
-        std::vector<std::shared_ptr<Material>> _materials,
-        unsigned int _posX,
-        unsigned int _posY,
-        unsigned long _seed);
+        std::vector<std::shared_ptr<Material>> _Material,
+        const unsigned int _posX,
+        const unsigned int _posY,
+        unsigned int _maxX,
+        unsigned int _maxY,
+        unsigned int _seed);
 
     std::shared_ptr<OccupyingObject> getOccupant();
 
@@ -41,7 +53,7 @@ class Node {
 
     std::vector<std::shared_ptr<NonOccupyingObject>> getObjects();
 
-    std::vector<std::shared_ptr<NonPhysicsObject>> getDebrees();
+    std::vector<std::shared_ptr<NonPhysicsObject>> getDebris();
 };
 
 #endif

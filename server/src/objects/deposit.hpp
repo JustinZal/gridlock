@@ -17,7 +17,7 @@ private:
 	//How much of the material is present
 	unsigned int volume;
 	
-	//How accisible is the material
+	//How accesible is the material
 	unsigned int accessibility;
 
 public:
