@@ -10,8 +10,6 @@
 
 #include "grid.hpp"
 
-
-template <unsigned int _SIZE>
 class Grid{
 
 private:
@@ -22,13 +20,13 @@ private:
 	std::vector<std::shared_ptr<Player>> players;
 
 	// Array of nodes, main grid
-	std::array<std::shared_prt<Node>,_SIZE> grid;
+	std::vector<std::shared_ptr<Node>> grid;
 
 public:
 	Grid(
-		unsigned long _seed,
-		unsigned int _playerExternalItems=4,
-		unsigned int _playerInternalItems=20);
+		unsigned int _size,
+		unsigned int _playerLimit,
+		unsigned long _seed);
 
 	void Populate();
 

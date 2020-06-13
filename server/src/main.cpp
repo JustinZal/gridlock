@@ -17,6 +17,7 @@
 
 #include <boost/asio.hpp>
 #include <boost/asio/signal_set.hpp>
+#include <boost/random.hpp>
 
 #include "grid.hpp"
 #include "listener.hpp"
