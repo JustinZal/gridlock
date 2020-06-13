@@ -12,11 +12,19 @@ class Material{
 
 private:
 	std::string name;
+
+	unsigned int abundance;
+
+	unsigned int accessibility;
+
 	unsigned int mass;
 
 public:
 	Material(
-		std::string _name);
+		std::string _name,
+		unsigned int _abundance,
+		unsigned int _accessibility,
+		unsigned int _mass);
 	
 	std::string getName();
 };

@@ -9,6 +9,7 @@
 #include "material.hpp"
 #include "module.hpp"
 #include "nonOccupyingObject.hpp"
+#include "nonPhysicsObject.hpp"
 #include "occupyingObject.hpp"
 #include "player.hpp"
 
@@ -23,12 +24,15 @@ class Node {
     //List of objects in node (eg: Bullet, Rocket)
     std::vector<std::shared_ptr<NonOccupyingObject>> objects;
 
-    //Collectables
-    //std::vector<std::shared_ptr<Depost>> deposits=nullptr;
+    //List of dropable items and deposits
+    std::vector<std::shared_ptr<NonPhysicsObject>> debrees;
 
   public:
     Node(
-        std::vector<Deposit> _deposits);
+        std::vector<std::shared_ptr<Deposit>> _deposits,
+        unsigned int _posX,
+        unsigned int _posY,
+        unsigned long _seed);
 
     std::shared_ptr<OccupyingObject> getOccupant();
 
@@ -37,7 +41,7 @@ class Node {
 
     std::vector<std::shared_ptr<NonOccupyingObject>> getObjects();
 
-    //std::vector<std::shared_ptr<Deposit>> getDeposits();
+    std::vector<std::shared_ptr<NonPhysicsObject>> getDebrees();
 };
 
 #endif

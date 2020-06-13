@@ -1,9 +1,12 @@
 #include "node.hpp"
 
 Node::Node(
-	std::vector<Deposit> _deposits){
+	std::vector<std::shared_ptr<Deposit>> _deposits,
+	unsigned int _posX,
+	unsigned int _posY,
+	unsigned long _seed){
 
-  //deposits = _deposits;
+
 }
 
 std::shared_ptr<OccupyingObject> Node::getOccupant(){
@@ -14,10 +17,15 @@ std::shared_ptr<OccupyingObject> Node::getOccupant(){
 void Node::setOccupant(
 	std::shared_ptr<OccupyingObject> _occupant){
 
-  occupant = _occupant;
+	occupant = _occupant;
 }
 
 std::vector<std::shared_ptr<NonOccupyingObject>> Node::getObjects(){
 
 	return objects;
+}
+
+std::vector<std::shared_ptr<NonPhysicsObject>> Node::getDebrees(){
+
+	return debrees;
 }
