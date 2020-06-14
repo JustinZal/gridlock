@@ -51,8 +51,6 @@ class Node {
         std::vector<std::shared_ptr<Material>> _Material,
         const unsigned int _posX,
         const unsigned int _posY,
-        unsigned int _maxX,
-        unsigned int _maxY,
         unsigned int _seed);
 
     std::shared_ptr<OccupyingObject> getOccupant();

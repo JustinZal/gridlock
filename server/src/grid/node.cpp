@@ -21,7 +21,6 @@ Node::Node(
 
 		if (p >= mat_ptr->getAbundance() ){
 
-			std::
 		}
 	}
 
