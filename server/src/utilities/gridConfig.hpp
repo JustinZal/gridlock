@@ -5,6 +5,7 @@
 #include <vector>
 #include <memory>
 
+#include "json.hpp"
 #include "material.hpp"
 #include "blueprint.hpp"
 

@@ -22,6 +22,8 @@ include_directories(
     ../libraries/boost
     ../libraries/boost/libs
 
+    ../libraries/nlohmann
+
     src/actions
     src/grid
     src/material
