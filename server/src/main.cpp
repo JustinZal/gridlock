@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <pwd.h>
+#include <time.h>
 
 #include "config.hpp"
 #include "util.hpp"
@@ -18,6 +19,8 @@
 #include <boost/asio.hpp>
 #include <boost/asio/signal_set.hpp>
 #include <boost/random.hpp>
+#include <boost/random/mersenne_twister.hpp>
+#include <boost/random/uniform_int_distribution.hpp>
 
 #include "grid.hpp"
 #include "listener.hpp"
@@ -29,12 +32,31 @@ int main(
 
     Config serverConfig(std::string(getpwuid(getuid())->pw_dir)+std::string("/.gridlock/server/server.conf"));
 
+    char option;
     unsigned int gridSize;
     unsigned int playerCount;
+    unsigned int seed;
 
     std::cerr << "Grid size: ";
     std::cin >> gridSize;
     std::cerr << "\n";
+
+    std::cerr << "Enter custom seed[y/n]";
+    std::cin >> option;
+    std::cerr << "\n";
+
+    if(option=='y'){
+        std::cerr << "Enter seed (int):";
+        std::cin >> seed;
+        std::cerr << "\n";
+    }
+    else{
+        std::default_random_engine gen(time(NULL));
+        boost::random::uniform_int_distribution<unsigned int> rSeed(1,std::numeric_limits<unsigned int>::max());
+        seed=rSeed(gen);
+    }
+
+    std::cerr << "Map seed=" << seed << "\n\n";
 
     std::cerr << "Player count: ";
     std::cin >> playerCount;
@@ -54,15 +76,17 @@ int main(
         boost::asio::ip::tcp::endpoint{
             boost::asio::ip::make_address(address),
             static_cast<unsigned short>(std::atoi(port))},
-        boost::make_shared<Grid>(gridSize,4,4))->run();
+        boost::make_shared<Grid>(
+            12345,
+            gridSize,
+            playerCount))->run();
 
-    std::cerr << "[Enter] to start the server, [commant+c] to end:";
-    std::cin.sync();
+    /*std::cin.sync();
     std::cin.get();
     std::cin.ignore();
-    std::cerr << "\n";
+    std::cerr << "\n";*/
 
-    std::cerr << "Starting server at " << address << ":" << port << "\n\n";
+    std::cerr << "Starting server at " << address << ":" << port << "\n[ctr+c] to stop server" << "\n\n";
 
     // Capture SIGINT and SIGTERM to perform a clean shutdown
     boost::asio::signal_set signals(ioc,SIGINT,SIGTERM);

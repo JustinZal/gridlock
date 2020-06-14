@@ -16,17 +16,17 @@ private:
 public:
 	//Get objects action at time (_t)
 	virtual Action getAction(
-		int _t);
+		int _t)=0;
 
 	//Mass of the object
-	virtual unsigned int getMass();
+	virtual unsigned int getMass()=0;
 
 	//Damage the objects gives when coliding
-	virtual Damage giveDamage();
+	virtual Damage giveDamage()=0;
 
 	//Give collision damage (_damage) and output if object was destroyed
 	virtual bool takeDamage(
-		Damage _damage);
+		Damage _damage)=0;
 };
 
 #endif

@@ -10,12 +10,13 @@
 #include "module.hpp"
 #include "constants.hpp"
 #include "physicsObject.hpp"
+#include "occupyingObject.hpp"
 #include "fabricator.hpp"
 #include "slots.hpp"
 
 #include "player.hpp"
 
-class Player:public PhysicsObject{
+class Player:public OccupyingObject{
 
 private:
 

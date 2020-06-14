@@ -11,6 +11,7 @@
 #include "movement.hpp"
 #include "damage.hpp"
 #include "physicsObject.hpp"
+#include "nonOccupyingObject.hpp"
 
 #include "rocket.hpp"
 
@@ -25,6 +26,7 @@ public:
 		Damage _damage);
 
 	Damage getDamage();
+	
 	unsigned int getDiameter();
 };
 
@@ -36,7 +38,7 @@ private:
 public:
 };
 
-class RocketProjectile:public PhysicsObject{
+class RocketProjectile:public NonOccupyingObject{
 
 private:
 	Rocket * type;

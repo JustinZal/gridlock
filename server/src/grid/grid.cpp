@@ -1,20 +1,21 @@
 #include "grid.hpp"
 
 Grid::Grid(
+	unsigned long _seed,
 	unsigned int _size,
 	unsigned int _playerLimit,
-	unsigned long _seed):
-	grid(_size){
-
-	for(unsigned int x;x<grid.max_size();x++){
-		for(unsigned int y;y<grid.max_size();y++){
-
+	std::string _filePath):
+	config(_filePath),
+	grid(_size,std::vector<std::shared_ptr<Node>>(_size)){
+	for(unsigned int x;x<grid.capacity();x++){
+		for(unsigned int y;y<grid[x].capacity();y++){
+			grid[x][y] = std::make_shared<Node>(
+				config.getMaterials(),
+				x,y,
+				_seed
+			);
 		}
 	}
-}
-
-void Grid::Populate(){
-
 }
 
 void Grid::Turn(){

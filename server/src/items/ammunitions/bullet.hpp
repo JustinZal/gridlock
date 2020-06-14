@@ -11,6 +11,7 @@
 #include "movement.hpp"
 #include "damage.hpp"
 #include "physicsObject.hpp"
+#include "nonOccupyingObject.hpp"
 
 #include "bullet.hpp"
 
@@ -37,7 +38,7 @@ private:
 public:
 };
 
-class BulletProjectile:public PhysicsObject{
+class BulletProjectile:public NonOccupyingObject{
 
 private:
 	Bullet * type;

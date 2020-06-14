@@ -3,12 +3,14 @@
 
 #include <stdexcept>
 #include <vector>
+
 #include "constants.hpp"
 #include "material.hpp"
+#include "nonOccupyingObject.hpp"
 
 #include "deposit.hpp"
 
-class Deposit{
+class Deposit:public NonOccupyingObject{
 
 private:
 	//Material contained
