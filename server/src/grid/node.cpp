@@ -2,14 +2,16 @@
 #include <boost/random.hpp>
 #include <random>
 Node::Node(
-	const unsigned int _posX,
-	const unsigned int _posY) : posX(_posX), posY(_posY){}
+		const unsigned int _posX,
+		const unsigned int _posY) : posX(_posX), posY(_posY){}
 
 Node::Node(
 	std::vector<std::shared_ptr<Material>> _Material,
 	const unsigned int _posX,
 	const unsigned int _posY,
-	unsigned int _seed): posX(_posX), posY(_posY) {
+	unsigned int _seed):
+	posX(_posX),
+	posY(_posY) {
 
 	std::mt19937 rand_eng(_seed);
 	//for every material in the construction material vector
