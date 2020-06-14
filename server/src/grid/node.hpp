@@ -37,6 +37,15 @@ class Node {
 	Node(
 		unsigned int _posX,
 		unsigned int _posY);
+	/**
+	 *
+	 * @param _Material a vector of pointers pointing to the material that will be harvested
+	 * @param _posX x coord of node
+	 * @param _posY y coord of node
+	 * @param _maxX x dimension size of grid
+	 * @param _maxY y dimension size of grid
+	 * @param _seed the randomized seed
+	 */
 
     Node(
         std::vector<std::shared_ptr<Material>> _Material,

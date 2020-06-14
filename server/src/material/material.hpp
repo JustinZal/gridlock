@@ -9,7 +9,8 @@
 #include "material.hpp"
 
 #define ABUNDANCE_CAP 100;
-#define STANDARD_SPREAD 4
+
+
 class Material{
 
 private:
