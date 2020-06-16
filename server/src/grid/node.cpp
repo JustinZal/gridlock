@@ -87,7 +87,11 @@ unsigned int Node::depositVolume(
 	std::uniform_int_distribution<int> decay(d, 15);
 	int a = distribution(engine);
 	//just some numbers I made up LUL, should give 100 for origin and less for everything else lmaoxd;
-	return (a+10) *10 - (decay(engine)* d)*5;
+	int res = (a+10) *10 - (decay(engine)* d)*5;
+	if (res < 0)
+		return 0;
+	return  res;
+
 }
 
 std::shared_ptr<OccupyingObject> Node::getOccupant(){
