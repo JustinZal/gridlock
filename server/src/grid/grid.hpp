@@ -8,6 +8,10 @@
 #include <mutex>
 #include <vector>
 #include <json.hpp>
+#include <sys/types.h>
+#include <pwd.h>
+#include <unistd.h>
+#include <nlohmann/json.hpp>
 
 #include "constants.hpp"
 
@@ -41,14 +45,16 @@ private:
 	std::vector<std::shared_ptr<Module>> modules;
 
 	std::vector<std::shared_ptr<Item>> items;
+
+	bool parseGameMode(std::string _file);
 	
 
 public:
 	Grid(
 		unsigned long _seed,
 		unsigned int _size=20,
-		unsigned int _playerLimit=4,
-		std::string _file="standard.json");
+		unsigned int _playerCount=4,
+		std::string _file="standard");
 
 	void Turn();
 };

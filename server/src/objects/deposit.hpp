@@ -6,15 +6,15 @@
 
 #include "constants.hpp"
 #include "material.hpp"
-#include "nonOccupyingObject.hpp"
+#include "nonPhysicsObject.hpp"
 
 #include "deposit.hpp"
 
-class Deposit:public NonOccupyingObject{
+class Deposit:public NonPhysicsObject{
 
 private:
 	//Material contained
-	Material *material;
+	std::shared_ptr<Material> material;
 
 	//How much of the material is present
 	unsigned int volume;
@@ -24,7 +24,7 @@ private:
 
 public:
 	Deposit(
-		/*Material * _material,*/
+		std::shared_ptr<Material> _material,
 		unsigned int _volume,
 		unsigned int _accessibility);
 

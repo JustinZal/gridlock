@@ -1,7 +1,11 @@
 #include "deposit.hpp"
 
-Deposit::Deposit(/*Material * _material,*/unsigned int _volume,unsigned int _accessibility){
-	//material=_material;
+Deposit::Deposit(
+	std::shared_ptr<Material> _material,
+	unsigned int _volume,
+	unsigned int _accessibility){
+	
+	material=_material;
 	volume=_volume;
 	accessibility=_accessibility;
 }

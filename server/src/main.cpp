@@ -30,23 +30,30 @@ int main(
     int argc,
     const char * argv[]){
 
+    std::cerr << "\nRunning GridLock server...\n\n";
+
     Config serverConfig(std::string(getpwuid(getuid())->pw_dir)+std::string("/.gridlock/server/server.conf"));
 
     char option;
     unsigned int gridSize;
     unsigned int playerCount;
     unsigned int seed;
+    unsigned int gameMode;
 
     std::cerr << "Grid size: ";
     std::cin >> gridSize;
     std::cerr << "\n";
 
-    std::cerr << "Enter custom seed[y/n]";
+    std::cerr << "Player count: ";
+    std::cin >> playerCount;
+    std::cerr << "\n";
+
+    std::cerr << "Use custom seed[y/n]";
     std::cin >> option;
     std::cerr << "\n";
 
     if(option=='y'){
-        std::cerr << "Enter seed (int):";
+        std::cerr << "Enter seed (int): ";
         std::cin >> seed;
         std::cerr << "\n";
     }
@@ -56,11 +63,17 @@ int main(
         seed=rSeed(gen);
     }
 
-    std::cerr << "Map seed=" << seed << "\n\n";
+    std::cerr << "Map seed = " << seed << "\n\n";
 
-    std::cerr << "Player count: ";
-    std::cin >> playerCount;
+    std::cerr << "Use custom game mode[y/n]";
+    std::cin >> option;
     std::cerr << "\n";
+
+    if(option=='y'){
+        std::cerr << "Ender file name: ";
+        std::cin >> gameMode;
+        std::cerr << "\n";
+    }
 
     auto const address=(serverConfig.existsValue("host","address")?serverConfig.getValue("host","address"):
         exec("printf `ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`")).c_str();

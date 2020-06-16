@@ -31,12 +31,28 @@ class Node {
 
     const unsigned int posY;
 
+    bool isClusterOrigin(
+        unsigned int _posX,
+        unsigned int _posY,
+        unsigned int _seed,
+        std::shared_ptr<Material> _material);
+
+    unsigned int depositVolume(
+        unsigned int _posX,
+        unsigned int _posY,
+        unsigned int _seed,
+        long _originPosX,
+        long _originPosY,
+        std::shared_ptr<Material> _material);
+
 
     //Base Node constructor posX and posY not currently implemented
   public:
 	Node(
-		unsigned int _posX,
-		unsigned int _posY);
+		const unsigned int _posX,
+		const unsigned int _posY,
+        unsigned int _seed,
+        std::vector<std::shared_ptr<Material>> _materials);
 	/**
 	 *
 	 * @param _Material a vector of pointers pointing to the material that will be harvested
@@ -46,12 +62,6 @@ class Node {
 	 * @param _maxY y dimension size of grid
 	 * @param _seed the randomized seed
 	 */
-
-    Node(
-        std::vector<std::shared_ptr<Material>> _Material,
-        const unsigned int _posX,
-        const unsigned int _posY,
-        unsigned int _seed);
 
     std::shared_ptr<OccupyingObject> getOccupant();
 
