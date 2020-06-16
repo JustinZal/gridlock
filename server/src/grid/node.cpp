@@ -26,13 +26,47 @@ Node::Node(
 	}
 
 }
+/**
+ *
+ * @param _posX
+ * @param _posY
+ * @param _seed current build adds a value associated to the material to the seed before being introduced in the function
+ * @return  seed associated to the x, y positions and the seed for randomization
+ */
+inline unsigned long seedConcat(unsigned int _posX, unsigned int _posY, unsigned int _seed){
+	//concat x and y positions numerically, x then y.
+	unsigned int pwr = 1;
+	while (_posY/pwr > 1 )
+		pwr *= 10;
+	unsigned long XYcat = _posX * pwr + _posY;
+	pwr = 1;
+	//numerically concatenate the seed and the XY conc.
+	while (XYcat  / pwr > 0)
+		pwr *= 10;
+	return _seed * pwr + XYcat;
+}
+
 
 bool Node::isClusterOrigin(
     unsigned int _posX,
     unsigned int _posY,
    	unsigned int _seed,
     std::shared_ptr<Material> _material){
-	return false;
+	std::string n = _material->getName();
+	unsigned int sum = 0;
+	for (int i = 0; i < n.size(); i++)
+		sum += (n[i] * (i+1));
+	//add a number associated to material name to seed
+	long seed = seedConcat(_posX , _posY, _seed + sum);
+	std::default_random_engine engine(seed);
+	int max = MATERIAL_ABUNDANCE_CAP;
+	std::uniform_int_distribution<int> distribution(0, max);
+	if (_material->getAbundance() > distribution(engine) )
+		return true;
+
+
+
+
 }
 
 unsigned int Node::depositVolume(

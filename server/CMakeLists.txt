@@ -41,7 +41,6 @@ SET (TARGET_SRC
     src/main.cpp
     src/grid/grid.cpp
     src/grid/node.cpp
-    src/grid/RandomGeneration.cpp
     src/material/blueprint.cpp
     src/material/material.cpp
     src/objects/deposit.cpp

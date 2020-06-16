@@ -8,7 +8,7 @@
 
 #include "material.hpp"
 
-#define ABUNDANCE_CAP 100;
+#define MATERIAL_ABUNDANCE_CAP 100;
 
 
 class Material{
