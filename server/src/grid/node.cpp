@@ -61,11 +61,10 @@ bool Node::isClusterOrigin(
 	std::default_random_engine engine(seed);
 	int max = MATERIAL_ABUNDANCE_CAP;
 	std::uniform_int_distribution<int> distribution(0, max);
+	//if our abundance is greater than the random number, this is a cluster
 	if (_material->getAbundance() > distribution(engine) )
 		return true;
-
-
-
+	else return false;
 
 }
 
@@ -76,6 +75,7 @@ unsigned int Node::depositVolume(
     long _originPosX,
     long _originPosY,
     std::shared_ptr<Material> _material){
+	if (isClusterOrigin(_posX, _posY, _seed, ))
 	return 1;
 }
 
