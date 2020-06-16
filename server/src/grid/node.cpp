@@ -75,7 +75,6 @@ unsigned int Node::depositVolume(
     long _originPosX,
     long _originPosY,
     std::shared_ptr<Material> _material){
-	if (isClusterOrigin(_posX, _posY, _seed, ))
 	return 1;
 }
 
