@@ -1,7 +1,7 @@
 #include "node.hpp"
 #include <boost/random.hpp>
 #include <random>
-
+#include <cmath>
 #define MAX_CLUSTER_SIZE 5
 
 Node::Node(
@@ -67,15 +67,27 @@ bool Node::isClusterOrigin(
 	else return false;
 
 }
+inline int distance(int x1, int x2,  int y1, int y2){
+	return abs(x1 - x2) + abs(y1 - y2);
+}
 
 unsigned int Node::depositVolume(
     unsigned int _posX,
     unsigned int _posY,
     unsigned int _seed,
+
     long _originPosX,
     long _originPosY,
     std::shared_ptr<Material> _material){
-	return 1;
+	long s = seedConcat(_posX, _posY, _seed);
+	std::default_random_engine engine(s);
+	int d = distance(_posX, _originPosX, _posY, _originPosY);
+
+	std::uniform_int_distribution<int> distribution(0,d) ;
+	std::uniform_int_distribution<int> decay(d, 15);
+	int a = distribution(engine);
+	//just some numbers I made up LUL, should give 100 for origin and less for everything else lmaoxd;
+	return (a+10) *10 - (decay(engine)* d)*5;
 }
 
 std::shared_ptr<OccupyingObject> Node::getOccupant(){
