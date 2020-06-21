@@ -58,7 +58,9 @@ SET (TARGET_SRC
     src/utilities/util.cpp
     src/utilities/config.cpp
     src/webSocketServer/listener.cpp
-    src/webSocketServer/webSocketSession.cpp
-    )
+    src/webSocketServer/webSocketSession.cpp src/player/Ship.cpp
+    src/player/Ship.h
+
+        )
 
 add_executable("${PROJECT_NAME}" "${TARGET_SRC}")
