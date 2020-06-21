@@ -70,7 +70,7 @@ int main(
     std::cerr << "\n";
 
     if(option=='y'){
-        std::cerr << "Ender file name: ";
+        std::cerr << "Enter file name: ";
         std::cin >> gameMode;
         std::cerr << "\n";
     }

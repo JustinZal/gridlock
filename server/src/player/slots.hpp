@@ -17,18 +17,45 @@ class Slots{
 
   public:
     bool addItem(
-        _TYPE item);
+        _TYPE item){
+		if (!dryAddItem(item)) {
+			return false;
+		}
+
+		slots.push_back(item);
+		return true;
+
+    }
 
     Module * getItem(
-        unsigned int itemId);
+        unsigned int itemId){
+		if (!dryGetItem(itemId)) {
+			return NULL;
+		}
 
-    std::vector<Item> * getItems();
+		return &slots[itemId];
+    }
+
+    std::vector<Item> * getItems(){
+		return &slots;
+    }
 
     bool dryAddItem(
-        Module item);
+        Module item){
+		const unsigned int len=item.getSize();
+		unsigned int occupied_slots=0;
+
+		for (Module element:slots){
+			occupied_slots+=element.getSize();
+		}
+
+		return (item.getSize() + occupied_slots) <= size;
+    }
 
     bool dryGetItem(
-        unsigned int itemId);
+        unsigned int itemId){
+		return itemId <= (slots.size() - 1);
+    }
 //TEMPLATE DEFINITION AND DECLARATION CANNOT BE SEPARATED LMAO;
     Slots(
         unsigned int _size){
