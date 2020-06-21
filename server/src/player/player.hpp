@@ -24,6 +24,12 @@ private:
 
 	std::string token;
 
+	int credits;
+
+	unsigned int posX;
+
+	unsigned int posY;
+
 	Fabricator fabricator();
 
 	Slots<Item> externalItems;
@@ -40,6 +46,13 @@ public:
 	std::string getName();
 
 	std::string getToken();
+
+	unsigned int getPosX();
+
+	unsigned int getPosY();
+
+	int getCredits();
+
 
 	Action getAction(
 		int _t) override;

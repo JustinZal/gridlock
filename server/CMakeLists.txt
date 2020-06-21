@@ -53,7 +53,7 @@ SET (TARGET_SRC
     #src/player/shipModules/shield.cpp
     src/items/item.cpp
     src/player/fabricator.cpp
-    #src/player/player.cpp
+    src/player/player.cpp
     src/player/slots.cpp
     src/utilities/util.cpp
     src/utilities/config.cpp

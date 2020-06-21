@@ -37,4 +37,5 @@ bool Grid::parseGameMode(std::string _file){
 
 void Grid::Turn(){
 
+
 }

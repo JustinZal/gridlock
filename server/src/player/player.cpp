@@ -29,3 +29,14 @@ Damage Player::giveDamage(){
 // bool Player::takeDamage(Damage _damage){
 
 // }
+unsigned int Player::getPosX(){
+	return posY;
+}
+
+unsigned int Player::getPosY(){
+	return posY;
+}
+
+int Player::getCredits(){
+	return credits;
+}
