@@ -10,11 +10,10 @@
 
 template <class _TYPE>
 class Slots{
-
   private:
     unsigned int size;
 
-    std::vector<_TYPE> slots;
+  	std::vector<_TYPE> slots;
 
   public:
     bool addItem(
@@ -30,9 +29,11 @@ class Slots{
 
     bool dryGetItem(
         unsigned int itemId);
-
+//TEMPLATE DEFINITION AND DECLARATION CANNOT BE SEPARATED LMAO;
     Slots(
-        unsigned int _size);
+        unsigned int _size){
+    	size = _size;
+    }
 };
 
 #endif

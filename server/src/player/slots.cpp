@@ -40,8 +40,3 @@ template <class _TYPE>
 bool Slots<_TYPE>::dryGetItem(unsigned int itemId) {
   return itemId <= (slots.size() - 1);
 }
-
-template <class _TYPE>
-Slots<_TYPE>::Slots(unsigned int _size) {
-  size = _size;
-}

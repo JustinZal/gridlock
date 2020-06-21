@@ -13,7 +13,7 @@ class Module{
 private:
 	
 public:
-	virtual unsigned int getSize();
+	virtual unsigned int getSize() = 0;
 };
 
 #endif

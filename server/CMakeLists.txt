@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION "3.17.3")
+cmake_minimum_required(VERSION "3.15.3")
 
 # Version Information ---------------------------------------------------------
 project(gridlock)
@@ -14,7 +14,7 @@ MESSAGE ("Source path: ${PROJECT_SOURCE_DIR}")
 
 SET (CMAKE_RUNTIME_OUTPUT_DIRECTORY build/)
 
-SET (CMAKE_CXX_STANDARD 11)
+SET (CMAKE_CXX_STANDARD 14)
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(

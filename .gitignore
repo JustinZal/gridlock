@@ -84,5 +84,6 @@ client/Makefile
 # example files #
 *.x.*
 
-# cLine files #
+# CLion files #
 .idea/
+gridlock.cbp

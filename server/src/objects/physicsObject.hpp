@@ -15,13 +15,13 @@ private:
 
 public:
 	//Get objects action at time (_t)
-	virtual Action getAction(
+	virtual std::unique_ptr<Action> getAction(
 		int _t)=0;
 
 	//Mass of the object
 	virtual unsigned int getMass()=0;
 
-	//Damage the objects gives when coliding
+	//Damage the objects gives when colliding
 	virtual Damage giveDamage()=0;
 
 	//Give collision damage (_damage) and output if object was destroyed

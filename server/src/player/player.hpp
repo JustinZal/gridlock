@@ -16,7 +16,7 @@
 
 #include "player.hpp"
 
-class Player:public OccupyingObject{
+class Player : public OccupyingObject{
 
 private:
 
@@ -33,8 +33,9 @@ private:
 	Fabricator fabricator();
 
 	Slots<Item> externalItems;
+//TODO IMPLEMENT INTERNALITEMS
 
-	Slots<InternalItem> internalItems;
+	Slots<Item> internalItems;
 
 public:
 	Player(
@@ -53,16 +54,14 @@ public:
 
 	int getCredits();
 
-
-	Action getAction(
+	std::unique_ptr<Action> getAction(
 		int _t) override;
 
 	unsigned int getMass() override;
 
 	Damage giveDamage() override;
 
-	bool takeDamage(
-		Damage _damage) override;
+	bool takeDamage(Damage _damage) override;
 };
 
 #endif
